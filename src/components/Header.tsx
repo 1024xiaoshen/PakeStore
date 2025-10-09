@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Header() {
     return (
-        <div className="h-16 bg-blue-500 flex justify-between items-center">
+        <div className="h-16 bg-background flex justify-between items-center">
             <div className="flex items-center justify-between">
                 <Image
                     src="/store.webp"
