@@ -27,10 +27,10 @@ export default function Login() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex items-center justify-center px-4">
+        <div className="min-h-screen bg-gradient-to-br from-pink-100 via-white to-blue-200 flex items-center justify-center px-4">
             <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8 space-y-6">
                 <div className="flex flex-col items-center">
-                    <img src="/logo.svg" alt="Logo" className="h-16 mb-2" />
+                    <img src="/store.webp" alt="Logo" className="h-16 mb-2" />
                     <h1 className="text-2xl font-bold text-blue-600 mb-2">
                         欢迎登录
                     </h1>
