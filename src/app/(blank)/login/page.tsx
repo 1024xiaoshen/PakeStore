@@ -2,10 +2,12 @@
 import useAppStore from '@/store/app'
 import useUserStore from '@/store/user'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Login() {
     const userStore: any = useUserStore()
     const appStore: any = useAppStore()
+    const router = useRouter()
     const [active, setActive] = useState(false)
 
     // const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -24,6 +26,7 @@ export default function Login() {
         setLoading(true)
         // 这里可以添加登录逻辑
         setTimeout(() => setLoading(false), 1000)
+        router.push('/')
     }
 
     return (
@@ -32,47 +35,28 @@ export default function Login() {
                 <div className="flex flex-col items-center">
                     <img src="/store.webp" alt="Logo" className="h-16 mb-2" />
                     <h1 className="text-2xl font-bold text-blue-600 mb-2">
-                        欢迎登录
+                        PakeStore
                     </h1>
-                    <p className="text-gray-500 text-sm">
-                        请输入您的账号和密码
-                    </p>
                 </div>
-                <form className="space-y-4" onSubmit={handleSubmit}>
-                    <div>
-                        <label
-                            className="block text-gray-700 text-sm mb-1"
-                            htmlFor="email"
-                        >
-                            邮箱
-                        </label>
-                        <input
-                            id="email"
-                            type="email"
-                            required
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-300"
-                            placeholder="your@email.com"
-                        />
-                    </div>
-                    <div>
-                        <label
-                            className="block text-gray-700 text-sm mb-1"
-                            htmlFor="password"
-                        >
-                            密码
-                        </label>
-                        <input
-                            id="password"
-                            type="password"
-                            required
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-300"
-                            placeholder="请输入密码"
-                        />
-                    </div>
+                <form className="space-y-6" onSubmit={handleSubmit}>
+                    <input
+                        id="email"
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full px-4 py-2 rounded-lg border-1 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 placeholder:text-gray-400 focus:border-blue-300"
+                        placeholder="请输入邮箱"
+                    />
+                    <input
+                        id="password"
+                        type="password"
+                        required
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="w-full px-4 py-2 rounded-lg border-1 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 placeholder:text-gray-400 focus:border-blue-300"
+                        placeholder="请输入密码"
+                    />
                     <button
                         type="submit"
                         disabled={loading}
