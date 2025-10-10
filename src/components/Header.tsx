@@ -14,7 +14,15 @@ import {
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 import Link from 'next/link'
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import {
+    CircleCheckIcon,
+    CircleHelpIcon,
+    CircleIcon,
+    GlobeIcon,
+    Search,
+    SunIcon,
+} from 'lucide-react'
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -75,7 +83,8 @@ export default function Header() {
                     height={100}
                     className="w-10 h-10"
                 />
-                <h1 className="text-2xl font-bold ml-2">PakeStore</h1>
+                <h1 className="font-bold ml-2">PakeStore</h1>
+                {/* menu items */}
                 <NavigationMenu viewport={false}>
                     <NavigationMenuList>
                         <NavigationMenuItem>
@@ -247,8 +256,18 @@ export default function Header() {
                         </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
+                {/* search */}
+                <Input
+                    type="text"
+                    placeholder="Search for app"
+                    className="w-84 ml-4 border-1 "
+                />
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-5">
+                {/* 主题切换 */}
+                <SunIcon />
+                {/* 多语言 */}
+                <GlobeIcon />
                 <Button onClick={handleLogout}>退出登陆</Button>
             </div>
         </div>
