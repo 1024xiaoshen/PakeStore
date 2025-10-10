@@ -66,7 +66,7 @@ export default function Header() {
     }
 
     return (
-        <div className="h-16  px-4 flex justify-between items-center">
+        <div className="h-16 bg-background px-4 flex justify-between items-center">
             <div className="flex items-center justify-between">
                 <Image
                     src="/store.webp"
@@ -75,9 +75,7 @@ export default function Header() {
                     height={100}
                     className="w-10 h-10"
                 />
-                <h1 className="text-white text-2xl font-bold ml-2">
-                    PakeStore
-                </h1>
+                <h1 className="text-2xl font-bold ml-2">PakeStore</h1>
                 <NavigationMenu viewport={false}>
                     <NavigationMenuList>
                         <NavigationMenuItem>
