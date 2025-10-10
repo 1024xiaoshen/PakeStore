@@ -24,6 +24,9 @@ export default function Login() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         setLoading(true)
+        userStore.setUser(true)
+        appStore.setApp(true)
+        setActive(true)
         // 这里可以添加登录逻辑
         setTimeout(() => setLoading(false), 1000)
         router.push('/')
