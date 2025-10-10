@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+    <img src="https://openstore.pages.dev/store.webp" width=300/>
+</p>
+<h1 align="center">PakeStore</h1>  
+<p align="center"><strong>开源应用商店，一个完全开源、自由、透明的现代应用商店</strong>
+</p>
 
-## Getting Started
+## 🌟 项目简介
 
-First, run the development server:
+PakeStore 是一个基于现代 Web 技术构建的开源应用商店，致力于为用户提供安全、透明、自由的应用分发体验。我们相信应用生态应该属于所有人，而不是被少数公司控制。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 核心特性
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔓 完全开源
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   **代码透明**: 所有代码在 GitHub 公开，接受社区审查
+-   **自由使用**: 基于开源协议，可自由使用、修改和分发
+-   **社区驱动**: 由全球开发者共同维护和改进
+-   **开源应用优先**: 优先推荐和收录开源应用
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🛡️ 安全可靠
 
-## Learn More
+-   **应用审核**: 严格的应用审核机制，确保软件安全
+-   **无恶意软件**: 所有应用都经过安全扫描和验证
+-   **隐私保护**: 不收集用户隐私数据，尊重用户权利
 
-To learn more about Next.js, take a look at the following resources:
+### 🌍 跨平台支持
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   **Windows**: 完整的 Windows 应用支持
+-   **macOS**: 为 Mac 用户优化的应用体验
+-   **Linux**: 支持各大 Linux 发行版
+-   **移动端**: Android 和 iOS 应用（规划中）
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 应用分类
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| 类别      | 描述                   | 应用数量 |
+| --------- | ---------------------- | -------- |
+| 🎮 游戏   | 各类开源游戏和免费游戏 | 150+     |
+| 💼 生产力 | 办公、开发、设计工具   | 200+     |
+| 🎨 创意   | 图像、视频、音频编辑   | 80+      |
+| 🌐 网络   | 浏览器、通信、下载工具 | 60+      |
+| 🔧 工具   | 系统工具、实用程序     | 120+     |
+| 📚 教育   | 学习、阅读、知识管理   | 90+      |
