@@ -20,7 +20,6 @@ import {
     CircleHelpIcon,
     CircleIcon,
     GlobeIcon,
-    Search,
     SunIcon,
 } from 'lucide-react'
 
