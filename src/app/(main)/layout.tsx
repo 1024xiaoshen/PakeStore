@@ -4,8 +4,8 @@ import '../globals.css'
 import '@/assets/fonts/iconfont.css'
 import Header from '@/components/Header'
 import { ThemeProvider } from 'next-themes'
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
-import { AppSidebar } from '@/components/AppSidebar'
+// import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
+// import { AppSidebar } from '@/components/AppSidebar'
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -35,17 +35,7 @@ export default function RootLayout({
             >
                 <ThemeProvider attribute="class">
                     <Header />
-                    <SidebarProvider
-                        style={
-                            {
-                                '--sidebar-width': '15rem',
-                                '--sidebar-width-mobile': '20rem',
-                            } as React.CSSProperties
-                        }
-                    >
-                        <AppSidebar />
-                        {children}
-                    </SidebarProvider>
+                    <div className="px-30">{children}</div>
                 </ThemeProvider>
             </body>
         </html>

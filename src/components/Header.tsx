@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button'
 import useUserStore from '@/store/user'
 import useAppStore from '@/store/app'
 import { useRouter } from 'next/navigation'
-import { useTheme } from 'next-themes'
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -68,7 +67,6 @@ export default function Header() {
     const userStore: any = useUserStore()
     const appStore: any = useAppStore()
     const router = useRouter()
-    const { theme, setTheme } = useTheme()
 
     const handleLogout = () => {
         userStore.setUser(false)
@@ -77,7 +75,7 @@ export default function Header() {
     }
 
     return (
-        <div className="h-16 bg-background px-4 flex justify-between items-center sticky top-0 z-50 w-full shadow-md">
+        <div className="h-16 bg-background px-30 flex justify-between items-center sticky top-0 z-50 w-full shadow-md">
             <div className="flex items-center justify-between">
                 <Image
                     src="/store.webp"
@@ -94,7 +92,7 @@ export default function Header() {
                     className="w-84 ml-4 border-1 "
                 /> */}
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
                 {/* menu items */}
                 <NavigationMenu viewport={false}>
                     <NavigationMenuList>
@@ -289,7 +287,7 @@ export default function Header() {
                 <NavigationMenu>
                     <NavigationMenuList>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger className="cursor-pointer">
+                            <NavigationMenuTrigger className="cursor-pointer w-8 h-8">
                                 <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
