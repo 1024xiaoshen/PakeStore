@@ -15,15 +15,16 @@ import {
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 import Link from 'next/link'
-import { Input } from '@/components/ui/input'
 import {
     CircleCheckIcon,
     CircleHelpIcon,
     CircleIcon,
     GlobeIcon,
     MoonIcon,
+    Search,
     SunIcon,
 } from 'lucide-react'
+import { ThemeToggle } from '@/components/ThemeToggle'
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -76,7 +77,7 @@ export default function Header() {
     }
 
     return (
-        <div className="h-16 bg-background px-4 flex justify-between items-center">
+        <div className="h-16 bg-background px-4 flex justify-between items-center sticky top-0 z-50 w-full shadow-md">
             <div className="flex items-center justify-between">
                 <Image
                     src="/store.webp"
@@ -86,6 +87,14 @@ export default function Header() {
                     className="w-10 h-10"
                 />
                 <h1 className="font-bold ml-2">PakeStore</h1>
+                {/* search */}
+                {/* <Input
+                    type="text"
+                    placeholder="Search for app"
+                    className="w-84 ml-4 border-1 "
+                /> */}
+            </div>
+            <div className="flex items-center gap-2">
                 {/* menu items */}
                 <NavigationMenu viewport={false}>
                     <NavigationMenuList>
@@ -272,28 +281,10 @@ export default function Header() {
                         </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
-                {/* search */}
-                <Input
-                    type="text"
-                    placeholder="Search for app"
-                    className="w-84 ml-4 border-1 "
-                />
-            </div>
-            <div className="flex items-center gap-2">
+                {/* 搜索 */}
+                <Search className="cursor-pointer" />
                 {/* 主题切换 */}
-                {theme === 'light' ? (
-                    <MoonIcon
-                        className="cursor-pointer"
-                        size={24}
-                        onClick={() => setTheme('dark')}
-                    />
-                ) : (
-                    <SunIcon
-                        className="cursor-pointer"
-                        size={24}
-                        onClick={() => setTheme('light')}
-                    />
-                )}
+                <ThemeToggle />
                 {/* 多语言 */}
                 <NavigationMenu>
                     <NavigationMenuList>
