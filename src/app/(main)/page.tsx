@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <div className="flex gap-4 mt-4 h-100">
             {/* left */}
-            <div className="w-3/5 rounded-lg">
+            <div className="w-3/5">
                 {/* Carousel */}
                 <Carousel
                     plugins={[
@@ -29,21 +29,21 @@ export default function Home() {
                             <img
                                 src="https://files.pakeplus.com/sponsor.webp"
                                 alt="Carousel 1"
-                                className="w-full h-full"
+                                className="w-full h-full rounded-lg overflow-hidden"
                             />
                         </CarouselItem>
                         <CarouselItem>
                             <img
                                 src="https://pakeplus.com/assets/phone1.Bg-YGh6e.webp"
                                 alt="Carousel 2"
-                                className="w-full h-full"
+                                className="w-full h-full rounded-lg overflow-hidden"
                             />
                         </CarouselItem>
                         <CarouselItem>
                             <img
                                 src="https://pakeplus.com/assets/creat1.BYkNwqDR.webp"
                                 alt="Carousel 3"
-                                className="w-full h-full"
+                                className="w-full h-full rounded-lg overflow-hidden"
                             />
                         </CarouselItem>
                     </CarouselContent>
