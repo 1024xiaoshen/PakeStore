@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <div className="flex gap-4 mt-4 h-100">
             {/* left */}
-            <div className="w-3/5">
+            <div className="w-3/5 rounded-lg">
                 {/* Carousel */}
                 <Carousel
                     plugins={[
@@ -27,7 +27,7 @@ export default function Home() {
                     <CarouselContent className="h-full">
                         <CarouselItem>
                             <img
-                                src="https://pakeplus.com/assets/config1.B4u9PEWG.webp"
+                                src="https://files.pakeplus.com/sponsor.webp"
                                 alt="Carousel 1"
                                 className="w-full h-full"
                             />
@@ -47,6 +47,8 @@ export default function Home() {
                             />
                         </CarouselItem>
                     </CarouselContent>
+                    <CarouselPrevious className="translate-x-8 cursor-pointer" />
+                    <CarouselNext className="-translate-x-8 cursor-pointer" />
                 </Carousel>
             </div>
             {/* right */}
@@ -56,7 +58,7 @@ export default function Home() {
                     <img
                         src="https://pakeplus.com/assets/config1.B4u9PEWG.webp"
                         alt="Carousel 1"
-                        className="w-full h-full"
+                        className="w-full h-full rounded-lg overflow-hidden"
                     />
                 </div>
                 {/* bottom */}
@@ -64,12 +66,12 @@ export default function Home() {
                     <img
                         src="https://pakeplus.com/assets/config1.B4u9PEWG.webp"
                         alt="Carousel 1"
-                        className="w-1/2 pr-2"
+                        className="w-1/2 mr-2 rounded-lg overflow-hidden"
                     />
                     <img
                         src="https://pakeplus.com/assets/config1.B4u9PEWG.webp"
                         alt="Carousel 1"
-                        className="w-1/2 pl-2"
+                        className="w-1/2 ml-2 rounded-lg overflow-hidden"
                     />
                 </div>
             </div>

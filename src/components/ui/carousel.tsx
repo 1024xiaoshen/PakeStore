@@ -5,7 +5,6 @@ import useEmblaCarousel, {
     type UseEmblaCarouselType,
 } from 'embla-carousel-react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
-
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 
@@ -121,7 +120,7 @@ function Carousel({
         >
             <div
                 onKeyDownCapture={handleKeyDown}
-                className={cn('relative', className)}
+                className={cn('relative group', className)}
                 role="region"
                 aria-roledescription="carousel"
                 data-slot="carousel"
@@ -186,7 +185,7 @@ function CarouselPrevious({
             variant={variant}
             size={size}
             className={cn(
-                'absolute size-8 rounded-full',
+                'absolute size-8 rounded-full opacity-0 transition-opacity duration-200 group-hover:opacity-100',
                 orientation === 'horizontal'
                     ? 'top-1/2 -left-12 -translate-y-1/2'
                     : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -216,7 +215,7 @@ function CarouselNext({
             variant={variant}
             size={size}
             className={cn(
-                'absolute size-8 rounded-full',
+                'absolute size-8 rounded-full opacity-0 transition-opacity duration-200 group-hover:opacity-100',
                 orientation === 'horizontal'
                     ? 'top-1/2 -right-12 -translate-y-1/2'
                     : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
