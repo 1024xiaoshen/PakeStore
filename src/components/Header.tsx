@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import useUserStore from '@/store/user'
 import useAppStore from '@/store/app'
 import { useRouter } from 'next/navigation'
+import { useTheme } from 'next-themes'
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -20,6 +21,7 @@ import {
     CircleHelpIcon,
     CircleIcon,
     GlobeIcon,
+    MoonIcon,
     SunIcon,
 } from 'lucide-react'
 
@@ -65,6 +67,7 @@ export default function Header() {
     const userStore: any = useUserStore()
     const appStore: any = useAppStore()
     const router = useRouter()
+    const { theme, setTheme } = useTheme()
 
     const handleLogout = () => {
         userStore.setUser(false)
@@ -264,7 +267,11 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-5">
                 {/* 主题切换 */}
-                <SunIcon />
+                {theme === 'light' ? (
+                    <MoonIcon onClick={() => setTheme('dark')} />
+                ) : (
+                    <SunIcon onClick={() => setTheme('light')} />
+                )}
                 {/* 多语言 */}
                 <GlobeIcon />
                 <Button onClick={handleLogout}>退出登陆</Button>
