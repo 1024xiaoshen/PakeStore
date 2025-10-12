@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: 'PakeStore',
     description: 'Your creativity should be discovered，你的创意应该被发现',
+    keywords: ['创意', '发现', '创作', '平台'],
 }
 
 export default function RootLayout({
