@@ -81,8 +81,8 @@ export default function Header() {
                 <Image
                     src="/store.webp"
                     alt="Logo"
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
                     className="w-10 h-10"
                 />
                 <h1 className="font-bold ml-2">PakeStore</h1>
@@ -90,7 +90,7 @@ export default function Header() {
                 <NavigationMenu viewport={false}>
                     <NavigationMenuList>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>首页</NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                     <li className="row-span-3">
@@ -132,9 +132,7 @@ export default function Header() {
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger>
-                                Components
-                            </NavigationMenuTrigger>
+                            <NavigationMenuTrigger>热门</NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                     {components.map((component) => (
@@ -154,11 +152,11 @@ export default function Header() {
                                 asChild
                                 className={navigationMenuTriggerStyle()}
                             >
-                                <Link href="/docs">Docs</Link>
+                                <Link href="/docs">Mac</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger>List</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>iOS</NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[300px] gap-4">
                                     <li>
@@ -200,7 +198,7 @@ export default function Header() {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>
-                                Simple
+                                Windows
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[200px] gap-4">
@@ -220,7 +218,7 @@ export default function Header() {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>
-                                With Icon
+                                Android
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[200px] gap-4">
@@ -256,6 +254,22 @@ export default function Header() {
                                 </ul>
                             </NavigationMenuContent>
                         </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger>Linux</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                    {components.map((component) => (
+                                        <ListItem
+                                            key={component.title}
+                                            title={component.title}
+                                            href={component.href}
+                                        >
+                                            {component.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
                 {/* search */}
@@ -265,15 +279,46 @@ export default function Header() {
                     className="w-84 ml-4 border-1 "
                 />
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-2">
                 {/* 主题切换 */}
                 {theme === 'light' ? (
-                    <MoonIcon onClick={() => setTheme('dark')} />
+                    <MoonIcon
+                        className="cursor-pointer"
+                        size={24}
+                        onClick={() => setTheme('dark')}
+                    />
                 ) : (
-                    <SunIcon onClick={() => setTheme('light')} />
+                    <SunIcon
+                        className="cursor-pointer"
+                        size={24}
+                        onClick={() => setTheme('light')}
+                    />
                 )}
                 {/* 多语言 */}
-                <GlobeIcon />
+                <NavigationMenu>
+                    <NavigationMenuList>
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger className="cursor-pointer">
+                                <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
+                            </NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[80px] gap-4">
+                                    <li>
+                                        <NavigationMenuLink asChild>
+                                            <Link href="#">简体中文</Link>
+                                        </NavigationMenuLink>
+                                        <NavigationMenuLink asChild>
+                                            <Link href="#">繁体中文</Link>
+                                        </NavigationMenuLink>
+                                        <NavigationMenuLink asChild>
+                                            <Link href="#">English</Link>
+                                        </NavigationMenuLink>
+                                    </li>
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                    </NavigationMenuList>
+                </NavigationMenu>
                 <Button onClick={handleLogout}>退出登陆</Button>
             </div>
         </div>

@@ -1,0 +1,23 @@
+{
+  "id": "5038710",
+  "name": "PakeStore",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "开源APP商店",
+  "glyphs": [
+    {
+      "icon_id": "41058844",
+      "name": "中英文切换_中文",
+      "font_class": "zhongyingwenqiehuan_zhongwen",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
+      "icon_id": "41058845",
+      "name": "中英文切换_EN",
+      "font_class": "zhongyingwenqiehuan_EN",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    }
+  ]
+}

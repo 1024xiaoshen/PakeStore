@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'iconfont'; /* Project id 5038710 */
+    src: url('iconfont.woff2?t=1760248410486') format('woff2'),
+        url('iconfont.woff?t=1760248410486') format('woff'),
+        url('iconfont.ttf?t=1760248410486') format('truetype');
+}
+
+.iconfont {
+    font-family: 'iconfont' !important;
+    font-size: 22px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zhongyingwenqiehuan_zhongwen:before {
+    content: '\e6a2';
+}
+
+.icon-zhongyingwenqiehuan_EN:before {
+    content: '\e6a3';
+}
