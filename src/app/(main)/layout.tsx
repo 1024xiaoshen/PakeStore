@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import '../globals.css'
 import '@/assets/fonts/iconfont.css'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { ThemeProvider } from 'next-themes'
 // import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 // import { AppSidebar } from '@/components/AppSidebar'
@@ -36,6 +37,7 @@ export default function RootLayout({
                 <ThemeProvider attribute="class">
                     <Header />
                     <div className="px-30">{children}</div>
+                    <Footer />
                 </ThemeProvider>
             </body>
         </html>
