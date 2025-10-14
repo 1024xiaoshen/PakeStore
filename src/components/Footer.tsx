@@ -1,21 +1,13 @@
 // components/Footer.js
 import Link from 'next/link'
-import {
-    MailIcon,
-    PhoneIcon,
-    MapPinIcon,
-    Youtube,
-    Twitter,
-    Instagram,
-    Linkedin,
-} from 'lucide-react'
+import { MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react'
 
 const Footer = () => {
     return (
-        <footer className="bg-secondary text-secondary-foreground pt-12 pb-6 mt-12">
+        <footer className="bg-secondary text-secondary-foreground pt-6 pb-6 mt-6">
             <div className="container mx-auto px-4 md:px-6">
                 {/* 主要内容区 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
                     {/* 品牌和简介 */}
                     <div>
                         <h3 className="text-xl font-bold mb-4">MyBrand</h3>
