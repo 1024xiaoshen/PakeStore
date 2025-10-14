@@ -196,7 +196,7 @@ export default function Header() {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>
-                                影音游戏
+                                其他设备
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[200px] gap-4">
