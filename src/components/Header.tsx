@@ -76,7 +76,10 @@ export default function Header() {
 
     return (
         <div className="h-16 bg-background px-20 flex justify-between items-center sticky top-0 z-50 w-full shadow-md">
-            <div className="flex items-center justify-between">
+            <div
+                className="flex items-center justify-between"
+                onClick={() => router.push('/')}
+            >
                 <Image
                     src="/store.webp"
                     alt="Logo"
@@ -87,7 +90,7 @@ export default function Header() {
                 <div className="ml-2">
                     <h1 className="font-bold">PakeStore</h1>
                     <p className="text-muted-foreground text-sm">
-                        发现最好的开源应用
+                        开源的应用商店
                     </p>
                 </div>
                 {/* search */}
