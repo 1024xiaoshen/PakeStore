@@ -75,7 +75,7 @@ export default function Header() {
     }
 
     return (
-        <div className="h-16 bg-background px-30 flex justify-between items-center sticky top-0 z-50 w-full shadow-md">
+        <div className="h-16 bg-background px-20 flex justify-between items-center sticky top-0 z-50 w-full shadow-md">
             <div className="flex items-center justify-between">
                 <Image
                     src="/store.webp"
@@ -84,7 +84,12 @@ export default function Header() {
                     height={80}
                     className="w-10 h-10"
                 />
-                <h1 className="font-bold ml-2">PakeStore</h1>
+                <div className="ml-2">
+                    <h1 className="font-bold">PakeStore</h1>
+                    <p className="text-muted-foreground text-sm">
+                        发现最好的开源应用
+                    </p>
+                </div>
                 {/* search */}
                 {/* <Input
                     type="text"
@@ -139,31 +144,17 @@ export default function Header() {
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger>热门</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                    {components.map((component) => (
-                                        <ListItem
-                                            key={component.title}
-                                            title={component.title}
-                                            href={component.href}
-                                        >
-                                            {component.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
                             <NavigationMenuLink
                                 asChild
                                 className={navigationMenuTriggerStyle()}
                             >
-                                <Link href="/docs">Mac</Link>
+                                <Link href="/docs">电脑应用</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger>iOS</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>
+                                手机应用
+                            </NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[300px] gap-4">
                                     <li>
@@ -205,7 +196,7 @@ export default function Header() {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>
-                                Windows
+                                影音游戏
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[200px] gap-4">
@@ -225,7 +216,7 @@ export default function Header() {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>
-                                Android
+                                AI工具集
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[200px] gap-4">
@@ -262,7 +253,27 @@ export default function Header() {
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger>Linux</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>
+                                编程开发
+                            </NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                    {components.map((component) => (
+                                        <ListItem
+                                            key={component.title}
+                                            title={component.title}
+                                            href={component.href}
+                                        >
+                                            {component.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger>
+                                博客文章
+                            </NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                     {components.map((component) => (
