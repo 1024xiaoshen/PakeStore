@@ -10,9 +10,9 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
                     {/* 品牌和简介 */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4">MyBrand</h3>
+                        <h3 className="text-xl font-bold mb-4">PakeStore</h3>
                         <p className="text-gray-400 mb-6">
-                            我们致力于提供最优质的服务和产品，满足您的各种需求。感谢您的支持与信任。
+                            发现最好的开源应用和项目，让你的创意被发现，让你的项目被应用。关注我们，提交你的应用和项目。
                         </p>
                         <div className="flex space-x-4">
                             <Link
@@ -50,14 +50,6 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">快速链接</h3>
                         <ul className="space-y-2">
-                            <li>
-                                <Link
-                                    href="/"
-                                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center"
-                                >
-                                    <span className="mr-2">→</span>首页
-                                </Link>
-                            </li>
                             <li>
                                 <Link
                                     href="/about"
@@ -138,12 +130,12 @@ const Footer = () => {
                                 <input
                                     type="email"
                                     placeholder="您的邮箱地址"
-                                    className="px-4 py-2 rounded-l-md bg-input focus:outline-none w-full"
+                                    className="px-4 rounded-l-md bg-input focus:outline-none w-full"
                                     required
                                 />
                                 <button
                                     type="submit"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors duration-300"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py rounded-r-md transition-colors duration-300"
                                 >
                                     订阅
                                 </button>
