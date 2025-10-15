@@ -80,13 +80,13 @@ export default function Home() {
             </div>
             {/* 专题 */}
             <div className="grid grid-cols-3 gap-4 mt-4">
-                <div className="h-50 bg-pink-500 flex items-center justify-center rounded-lg">
+                <div className="h-40 bg-pink-500 flex items-center justify-center rounded-lg">
                     新人必备
                 </div>
-                <div className="h-50 bg-green-500 flex items-center justify-center rounded-lg">
+                <div className="h-40 bg-green-500 flex items-center justify-center rounded-lg">
                     图像视频
                 </div>
-                <div className="h-50 bg-amber-300 flex items-center justify-center rounded-lg">
+                <div className="h-40 bg-amber-300 flex items-center justify-center rounded-lg">
                     生产力
                 </div>
             </div>
@@ -132,13 +132,13 @@ export default function Home() {
                     <span>探索与发现</span>
                 </h2>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="h-50 bg-pink-500 flex items-center justify-center rounded-lg">
+                    <div className="h-40 bg-pink-500 flex items-center justify-center rounded-lg">
                         新人必备
                     </div>
-                    <div className="h-50 bg-green-500 flex items-center justify-center rounded-lg">
+                    <div className="h-40 bg-green-500 flex items-center justify-center rounded-lg">
                         图像视频
                     </div>
-                    <div className="h-50 bg-amber-300 flex items-center justify-center rounded-lg">
+                    <div className="h-40 bg-amber-300 flex items-center justify-center rounded-lg">
                         生产力
                     </div>
                 </div>
@@ -185,13 +185,13 @@ export default function Home() {
                     <span>探索与发现</span>
                 </h2>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="h-50 bg-pink-500 flex items-center justify-center rounded-lg">
+                    <div className="h-40 bg-pink-500 flex items-center justify-center rounded-lg">
                         新人必备
                     </div>
-                    <div className="h-50 bg-green-500 flex items-center justify-center rounded-lg">
+                    <div className="h-40 bg-green-500 flex items-center justify-center rounded-lg">
                         图像视频
                     </div>
-                    <div className="h-50 bg-amber-300 flex items-center justify-center rounded-lg">
+                    <div className="h-40 bg-amber-300 flex items-center justify-center rounded-lg">
                         生产力
                     </div>
                 </div>

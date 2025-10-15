@@ -135,7 +135,7 @@ const Footer = () => {
                                 />
                                 <button
                                     type="submit"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py rounded-r-md transition-colors duration-300"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white px-2 py rounded-r-md transition-colors duration-300 w-20 h-10"
                                 >
                                     订阅
                                 </button>
