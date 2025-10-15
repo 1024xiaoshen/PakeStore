@@ -147,12 +147,24 @@ export default function Header() {
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <NavigationMenuLink
-                                asChild
-                                className={navigationMenuTriggerStyle()}
-                            >
-                                <Link href="/docs">电脑应用</Link>
-                            </NavigationMenuLink>
+                            <NavigationMenuTrigger>
+                                电脑应用
+                            </NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[200px] gap-4">
+                                    <li>
+                                        <NavigationMenuLink asChild>
+                                            <Link href="#">Mac</Link>
+                                        </NavigationMenuLink>
+                                        <NavigationMenuLink asChild>
+                                            <Link href="#">Windows</Link>
+                                        </NavigationMenuLink>
+                                        <NavigationMenuLink asChild>
+                                            <Link href="#">Linux</Link>
+                                        </NavigationMenuLink>
+                                    </li>
+                                </ul>
+                            </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>
