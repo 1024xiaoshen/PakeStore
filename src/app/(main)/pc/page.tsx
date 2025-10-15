@@ -1,3 +1,9 @@
 export default function PC() {
-    return <div>PC</div>
+    return (
+        <>
+            <div>
+                <h1>PC</h1>
+            </div>
+        </>
+    )
 }

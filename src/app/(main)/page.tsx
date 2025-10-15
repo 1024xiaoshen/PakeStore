@@ -11,7 +11,7 @@ import Autoplay from 'embla-carousel-autoplay'
 
 export default function Home() {
     return (
-        <>
+        <div className="container mx-auto px-4 md:px-6">
             {/* 轮播图 */}
             <div className="flex gap-4 mt-4 h-100">
                 {/* left */}
@@ -214,6 +214,6 @@ export default function Home() {
                     <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
