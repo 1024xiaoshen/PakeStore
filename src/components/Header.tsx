@@ -79,7 +79,7 @@ export default function Header() {
         <header className="py-5 sticky top-0 z-50 shadow-md bg-background">
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
                 <div
-                    className="flex items-center justify-between"
+                    className="flex items-center justify-between cursor-pointer"
                     onClick={() => router.push('/')}
                 >
                     <Image
