@@ -4,7 +4,7 @@ import { MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react'
 
 const Footer = () => {
     return (
-        <footer className="bg-secondary text-secondary-foreground pt-6 pb-6 mt-6">
+        <footer className="bg-background text-secondary-foreground pt-6 pb-6">
             <div className="container mx-auto px-4 md:px-6">
                 {/* 主要内容区 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">

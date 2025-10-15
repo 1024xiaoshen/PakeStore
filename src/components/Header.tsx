@@ -22,6 +22,7 @@ import {
     MoonIcon,
     Search,
     SunIcon,
+    UserIcon,
 } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
@@ -349,7 +350,14 @@ export default function Header() {
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
-                    <Button onClick={handleLogout}>退出登陆</Button>
+                    {/* 用户Icon */}
+                    <Image
+                        src="https://avatars.githubusercontent.com/u/56043599?v=4"
+                        alt="User"
+                        width={32}
+                        height={32}
+                        className="cursor-pointer rounded-full"
+                    />
                 </div>
             </div>
         </header>
