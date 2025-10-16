@@ -107,7 +107,7 @@ export default function Header() {
                     <NavigationMenu viewport={false}>
                         <NavigationMenuList>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-md font-bold">
                                     首页
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
@@ -154,7 +154,7 @@ export default function Header() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-md font-bold">
                                     电脑应用
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
@@ -180,7 +180,7 @@ export default function Header() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-md font-bold">
                                     手机应用
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
@@ -224,7 +224,7 @@ export default function Header() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-md font-bold">
                                     其他设备
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
@@ -246,7 +246,7 @@ export default function Header() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-md font-bold">
                                     AI工具集
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
@@ -284,7 +284,7 @@ export default function Header() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-md font-bold">
                                     编程开发
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
@@ -302,7 +302,7 @@ export default function Header() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-md font-bold">
                                     博客文章
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
