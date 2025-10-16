@@ -1,4 +1,5 @@
 import AppList from '@/components/AppList'
+import SideList from '@/components/SideList'
 import {
     Pagination,
     PaginationContent,
@@ -59,9 +60,9 @@ export default function PC() {
                 {/* right sidebar */}
                 <div className="w-1/5">
                     {/* 顶部标题 */}
-                    <h1 className="text-2xl font-bold">PC软件推荐</h1>
+                    <h1 className="text-2xl font-bold py-4">PC软件推荐</h1>
                     {/* 推荐列表 */}
-                    <div className="">推荐列表</div>
+                    <SideList />
                 </div>
             </div>
         </>
