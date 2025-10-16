@@ -20,15 +20,29 @@ export default function PC() {
                 {/* left main */}
                 <div className="w-4/5">
                     {/* 顶部筛选条件 */}
-                    <div className="flex items-center gap-2 py-4">
+                    <div className="flex items-end gap-4 py-4">
                         <h1 className="text-2xl font-bold">PC电脑软件</h1>
-                        <span className="text-sm text-gray-500">最新</span>
-                        <span className="text-sm text-gray-500">免费</span>
-                        <span className="text-sm text-gray-500">热门</span>
-                        <span className="text-sm text-gray-500">推荐</span>
-                        <span className="text-sm text-gray-500">评分</span>
-                        <span className="text-sm text-gray-500">下载量</span>
-                        <span className="text-sm text-gray-500">更新时间</span>
+                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
+                            最新
+                        </span>
+                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
+                            免费
+                        </span>
+                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
+                            热门
+                        </span>
+                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
+                            推荐
+                        </span>
+                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
+                            评分
+                        </span>
+                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
+                            下载量
+                        </span>
+                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
+                            更新时间
+                        </span>
                     </div>
                     {/* 中间展示列表 */}
                     <div className="">

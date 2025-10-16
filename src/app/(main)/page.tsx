@@ -24,7 +24,7 @@ export default function Home() {
                             }),
                         ]}
                         opts={{ loop: true }}
-                        className="w-full h-full"
+                        className="w-full h-full rounded-lg overflow-hidden"
                     >
                         <CarouselContent className="h-full">
                             <CarouselItem>
@@ -49,8 +49,8 @@ export default function Home() {
                                 />
                             </CarouselItem>
                         </CarouselContent>
-                        <CarouselPrevious className="translate-x-8 cursor-pointer" />
-                        <CarouselNext className="-translate-x-8 cursor-pointer" />
+                        <CarouselPrevious className="translate-x-12 cursor-pointer bg-opacity-50 border-none outline-none" />
+                        <CarouselNext className="-translate-x-12 cursor-pointer bg-opacity-50 border-none outline-none" />
                     </Carousel>
                 </div>
                 {/* right */}
