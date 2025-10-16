@@ -34,9 +34,9 @@ export default function PC() {
                         <AppList />
                     </div>
                     {/* 底部分页导航 */}
-                    <div className="">
+                    <div className="py-4 text-2xl">
                         <Pagination>
-                            <PaginationContent>
+                            <PaginationContent className="flex gap-2">
                                 <PaginationItem>
                                     <PaginationPrevious href="#" />
                                 </PaginationItem>
