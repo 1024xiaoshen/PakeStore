@@ -233,10 +233,10 @@ export default function AppList() {
 
     return (
         <>
-            <div className="flex flex-col bg-background">
+            <div className="flex flex-col bg-background px-4 py-4 shadow-md rounded-lg">
                 {/* 列表 */}
                 {appList.map((item) => (
-                    <div className="flex justify-between gap-2 py-4 px-4 hover:bg-gray-200">
+                    <div className="flex justify-between gap-2 py-4 hover:bg-gray-200 cursor-pointer border-b border-gray-200">
                         <Image
                             src="https://avatars.githubusercontent.com/u/56043599?v=4"
                             alt="User"

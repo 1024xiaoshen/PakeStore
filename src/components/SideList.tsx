@@ -62,14 +62,20 @@ export default function SideList() {
             description: 'SideList10',
             image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
         },
+        {
+            id: 11,
+            title: 'SideList11',
+            description: 'SideList11',
+            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
+        },
     ]
 
     return (
-        <div className="flex flex-col gap-2 bg-background p-4 rounded-lg border border-gray-200">
+        <div className="flex flex-col gap-2 bg-background p-4 rounded-lg shadow-md">
             {sideList.map((item) => (
                 <div
                     key={item.id}
-                    className="flex gap-2 py-2 px-4 hover:bg-gray-200"
+                    className="flex gap-2 py-2 px-4 hover:bg-gray-200 border-b border-gray-200"
                 >
                     <Image
                         src={item.image}
