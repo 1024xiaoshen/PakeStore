@@ -337,14 +337,18 @@ export default function Header() {
                     {/* 主题切换 */}
                     <ThemeToggle />
                     {/* 多语言 */}
-                    <DropdownMenu>
+                    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
                         <DropdownMenuTrigger
                             asChild
                             className="cursor-pointer border-none outline-none"
+                            onMouseEnter={() => setIsOpen(true)}
                         >
                             <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent sideOffset={5}>
+                        <DropdownMenuContent
+                            sideOffset={5}
+                            onMouseLeave={() => setIsOpen(false)}
+                        >
                             <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
                                 <div className="px-2 py-2">简体中文</div>
                             </DropdownMenuItem>
