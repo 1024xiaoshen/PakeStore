@@ -1,6 +1,13 @@
 'use client'
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+import {
+    DropdownMenu,
+    DropdownMenuCheckboxItem,
+    DropdownMenuContent,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 import useUserStore from '@/store/user'
 import useAppStore from '@/store/app'
 import { useRouter } from 'next/navigation'
@@ -25,6 +32,9 @@ import {
     UserIcon,
 } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
+import { Button } from './ui/button'
+import { DropdownMenuItem } from '@radix-ui/react-dropdown-menu'
+import { useState } from 'react'
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -68,6 +78,7 @@ export default function Header() {
     const userStore: any = useUserStore()
     const appStore: any = useAppStore()
     const router = useRouter()
+    const [isOpen, setIsOpen] = useState(false)
 
     const handleLogout = () => {
         userStore.setUser(false)
@@ -326,30 +337,25 @@ export default function Header() {
                     {/* 主题切换 */}
                     <ThemeToggle />
                     {/* 多语言 */}
-                    <NavigationMenu>
-                        <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink>
-                                    <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
-                                </NavigationMenuLink>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[80px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">简体中文</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">繁体中文</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">English</Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger
+                            asChild
+                            className="cursor-pointer border-none outline-none"
+                        >
+                            <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent sideOffset={5}>
+                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                <div className="px-2 py-2">简体中文</div>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                <div className="px-2 py-2">繁体中文</div>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                <div className="px-2 py-2">English</div>
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
                     {/* 用户Icon */}
                     <Image
                         src="https://avatars.githubusercontent.com/u/56043599?v=4"

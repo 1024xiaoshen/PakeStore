@@ -11,9 +11,9 @@ import Autoplay from 'embla-carousel-autoplay'
 
 export default function Home() {
     return (
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 py-4">
             {/* 轮播图 */}
-            <div className="flex gap-4 mt-4 h-100">
+            <div className="flex gap-4 h-100">
                 {/* left */}
                 <div className="w-3/5">
                     {/* Carousel */}
