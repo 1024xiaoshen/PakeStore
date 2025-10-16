@@ -329,9 +329,9 @@ export default function Header() {
                     <NavigationMenu>
                         <NavigationMenuList>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger className="cursor-pointer w-8 h-8">
+                                <NavigationMenuLink>
                                     <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
-                                </NavigationMenuTrigger>
+                                </NavigationMenuLink>
                                 <NavigationMenuContent>
                                     <ul className="grid w-[80px] gap-4">
                                         <li>
