@@ -219,7 +219,7 @@ export default function AppList() {
                             alt="User"
                             width={32}
                             height={32}
-                            className="cursor-pointer rounded-full"
+                            className="cursor-pointer rounded-md"
                         />
                         {/* 标题 */}
                         <div>

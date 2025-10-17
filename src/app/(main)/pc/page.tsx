@@ -57,17 +57,17 @@ export default function PC() {
                         </div>
                         {/* 布局 */}
                         <div className="flex items-end gap-2 text-gray-500">
-                            <GridIcon
-                                className={`hover:text-primary cursor-pointer ${
-                                    layout === 'grid' ? 'text-primary' : ''
-                                }`}
-                                onClick={() => setLayout('grid')}
-                            />
                             <ListIcon
                                 className={`hover:text-primary cursor-pointer ${
                                     layout === 'list' ? 'text-primary' : ''
                                 }`}
                                 onClick={() => setLayout('list')}
+                            />
+                            <GridIcon
+                                className={`hover:text-primary cursor-pointer ${
+                                    layout === 'grid' ? 'text-primary' : ''
+                                }`}
+                                onClick={() => setLayout('grid')}
                             />
                         </div>
                     </div>

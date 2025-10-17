@@ -1,6 +1,14 @@
 // components/Footer.js
 import Link from 'next/link'
-import { MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react'
+import {
+    MailIcon,
+    PhoneIcon,
+    MapPinIcon,
+    XIcon,
+    GithubIcon,
+    Youtube,
+    Twitter,
+} from 'lucide-react'
 
 const Footer = () => {
     return (
@@ -20,19 +28,26 @@ const Footer = () => {
                                 className="text-gray-400 hover:text-white transition-colors duration-300"
                                 aria-label="Facebook"
                             >
-                                <MailIcon size={20} />
+                                <XIcon size={20} />
                             </Link>
                             <Link
                                 href="#"
                                 className="text-gray-400 hover:text-white transition-colors duration-300"
                                 aria-label="Twitter"
                             >
-                                <MailIcon size={20} />
+                                <GithubIcon size={20} />
                             </Link>
                             <Link
                                 href="#"
                                 className="text-gray-400 hover:text-white transition-colors duration-300"
                                 aria-label="Instagram"
+                            >
+                                <Youtube size={20} />
+                            </Link>
+                            <Link
+                                href="#"
+                                className="text-gray-400 hover:text-white transition-colors duration-300"
+                                aria-label="LinkedIn"
                             >
                                 <MailIcon size={20} />
                             </Link>
@@ -41,7 +56,7 @@ const Footer = () => {
                                 className="text-gray-400 hover:text-white transition-colors duration-300"
                                 aria-label="LinkedIn"
                             >
-                                <MailIcon size={20} />
+                                <Twitter size={20} />
                             </Link>
                         </div>
                     </div>
