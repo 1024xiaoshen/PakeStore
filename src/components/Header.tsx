@@ -172,17 +172,17 @@ export default function Header() {
                                     <ul className="grid w-[200px] gap-4">
                                         <li>
                                             <NavigationMenuLink asChild>
-                                                <Link href="/pc?type=mac">
+                                                <Link href="/pc?type=Mac">
                                                     Mac
                                                 </Link>
                                             </NavigationMenuLink>
                                             <NavigationMenuLink asChild>
-                                                <Link href="/pc?type=windows">
+                                                <Link href="/pc?type=Windows">
                                                     Windows
                                                 </Link>
                                             </NavigationMenuLink>
                                             <NavigationMenuLink asChild>
-                                                <Link href="/pc?type=linux">
+                                                <Link href="/pc?type=Linux">
                                                     Linux
                                                 </Link>
                                             </NavigationMenuLink>
@@ -337,18 +337,14 @@ export default function Header() {
                     {/* 主题切换 */}
                     <ThemeToggle />
                     {/* 多语言 */}
-                    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+                    <DropdownMenu>
                         <DropdownMenuTrigger
                             asChild
                             className="cursor-pointer border-none outline-none"
-                            onMouseEnter={() => setIsOpen(true)}
                         >
                             <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent
-                            sideOffset={5}
-                            onMouseLeave={() => setIsOpen(false)}
-                        >
+                        <DropdownMenuContent sideOffset={5}>
                             <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
                                 <div className="px-2 py-2">简体中文</div>
                             </DropdownMenuItem>
@@ -361,13 +357,31 @@ export default function Header() {
                         </DropdownMenuContent>
                     </DropdownMenu>
                     {/* 用户Icon */}
-                    <Image
-                        src="https://avatars.githubusercontent.com/u/56043599?v=4"
-                        alt="User"
-                        width={32}
-                        height={32}
-                        className="cursor-pointer rounded-full"
-                    />
+                    <DropdownMenu>
+                        <DropdownMenuTrigger
+                            asChild
+                            className="cursor-pointer border-none outline-none"
+                        >
+                            <Image
+                                src="https://avatars.githubusercontent.com/u/56043599?v=4"
+                                alt="User"
+                                width={32}
+                                height={32}
+                                className="cursor-pointer rounded-full"
+                            />
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent sideOffset={5}>
+                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                <div className="px-2 py-2">个人中心</div>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                <div className="px-2 py-2">仓库首页</div>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                <div className="px-2 py-2">退出登陆</div>
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
                 </div>
             </div>
         </header>
