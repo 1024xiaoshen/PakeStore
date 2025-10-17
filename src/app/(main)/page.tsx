@@ -168,7 +168,7 @@ export default function Home() {
                     {essentialApps.map((item) => (
                         <div
                             key={item.id}
-                            className="h-30 bg-background border border-secondary shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
+                            className="h-30 bg-secondary border shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
                         >
                             <div className="flex items-center gap-4">
                                 <img
