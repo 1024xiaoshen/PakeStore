@@ -168,13 +168,13 @@ export default function Home() {
                     {essentialApps.map((item) => (
                         <div
                             key={item.id}
-                            className="h-30 bg-background border border-secondary shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
+                            className="h-30 bg-background border border-secondary shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-card"
                         >
                             <div className="flex items-center gap-4">
                                 <img
                                     src={item.image}
                                     alt="Carousel 1"
-                                    className="w-20 h-20 rounded-lg overflow-hidden cursor-pointer"
+                                    className="w-20 h-20 rounded-lg overflow-hidden cursor-pointer border border-secondary"
                                 />
                                 <div className="text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
