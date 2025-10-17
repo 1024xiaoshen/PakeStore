@@ -204,33 +204,7 @@ export default function AppList() {
             image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
             size: '100MB',
         },
-        {
-            id: 21,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-        },
-        {
-            id: 22,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-        },
-        {
-            id: 23,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
     ]
-
     return (
         <>
             <div className="flex flex-col bg-background px-4 py-4 shadow-md rounded-lg">
