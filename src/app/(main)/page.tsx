@@ -23,13 +23,13 @@ export default function Home() {
             id: 2,
             title: 'QQ',
             description: '社交聊天届的龙头',
-            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxjqj0LsYhYzaQpywh80DWhp9R_PUUwlUC6HwDrFW3t0lL25If1sXp1InDT2RlVNX5wBQtLPGAqQ72bPB09xzTzE-&format=source&w=150',
         },
         {
             id: 3,
             title: 'QQ',
             description: '社交聊天届的龙头',
-            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBQafG.qIxSOBbxlRUqcBfHShbF4q_iA3v2iZYGAxXnmuUoEh.0VsJZVS7Pj3HBg9r1xoDDnS3YOgyTctYinYD38-&format=source&w=150',
         },
         {
             id: 4,
@@ -139,23 +139,23 @@ export default function Home() {
             </div>
             {/* 专题 */}
             <div className="grid grid-cols-5 gap-4 mt-4">
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     新人必备
                 </div>
 
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     图像视频
                 </div>
 
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     生产力
                 </div>
 
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-red-300 to-pink-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-red-300 to-pink-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     游戏娱乐
                 </div>
 
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-purple-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-purple-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     AI工具
                 </div>
             </div>
@@ -173,17 +173,17 @@ export default function Home() {
                         >
                             <div className="flex items-center gap-4">
                                 <img
-                                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150"
+                                    src={item.image}
                                     alt="Carousel 1"
                                     className="w-20 h-20 rounded-lg overflow-hidden cursor-pointer"
                                 />
                                 <div className="text-lg font-bold flex flex-col">
-                                    <span>微信</span>
+                                    <span>{item.title}</span>
                                     <span className="text-sm text-gray-400">
                                         v1.0.0
                                     </span>
                                     <span className="text-sm text-gray-400">
-                                        社交聊天届的龙头
+                                        {item.description}
                                     </span>
                                 </div>
                             </div>
