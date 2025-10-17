@@ -82,7 +82,7 @@ export default function SideList() {
                         alt={item.title}
                         width={32}
                         height={32}
-                        className="rounded-full"
+                        className="rounded-md"
                     />
                     <h1>{item.title}</h1>
                 </div>

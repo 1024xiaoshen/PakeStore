@@ -14,10 +14,12 @@ import {
 import { GridIcon, ListIcon } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
 import { useState } from 'react'
+import { cn } from '@/lib/utils'
 
 export default function PC() {
     const pageNum = 10
-    const pageSize = 10
+    const pageSize = 10 // 每页显示条数
+    const [pageIndex, setPageIndex] = useState(1)
     // 获取url参数
     const searchParams = useSearchParams()
     const type = searchParams.get('type')
@@ -76,23 +78,39 @@ export default function PC() {
                         {layout === 'grid' ? <AppGrid /> : <AppList />}
                     </div>
                     {/* 底部分页导航 */}
-                    <div className="py-4 text-2xl">
+                    <div className="py-8 text-2xl">
                         <Pagination>
-                            <PaginationContent className="flex gap-2">
+                            <PaginationContent className="flex gap-4">
                                 <PaginationItem>
-                                    <PaginationPrevious href="#" />
+                                    <PaginationPrevious
+                                        href="#"
+                                        className="hover:text-blue-500 text-lg"
+                                    />
                                 </PaginationItem>
                                 {Array.from({ length: pageNum }).map(
                                     (_, index) => (
                                         <PaginationItem key={index}>
-                                            <PaginationLink href={`#`}>
+                                            <PaginationLink
+                                                onClick={() =>
+                                                    setPageIndex(index + 1)
+                                                }
+                                                className={cn(
+                                                    'text-lg border border-gray-200 rounded-full p-4 hover:border-blue-500 hover:text-blue-500 transition-all duration-300 cursor-pointer',
+                                                    index + 1 === pageIndex
+                                                        ? 'border-blue-500 text-blue-500'
+                                                        : ''
+                                                )}
+                                            >
                                                 {index + 1}
                                             </PaginationLink>
                                         </PaginationItem>
                                     )
                                 )}
                                 <PaginationItem>
-                                    <PaginationNext href="#" />
+                                    <PaginationNext
+                                        href="#"
+                                        className="hover:text-blue-500 text-lg"
+                                    />
                                 </PaginationItem>
                             </PaginationContent>
                         </Pagination>
