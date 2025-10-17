@@ -244,15 +244,13 @@ export default function Header() {
                                     <ul className="grid w-[200px] gap-4">
                                         <li>
                                             <NavigationMenuLink asChild>
-                                                <Link href="#">Components</Link>
+                                                <Link href="#">智能家居</Link>
                                             </NavigationMenuLink>
                                             <NavigationMenuLink asChild>
-                                                <Link href="#">
-                                                    Documentation
-                                                </Link>
+                                                <Link href="#">智能眼镜</Link>
                                             </NavigationMenuLink>
                                             <NavigationMenuLink asChild>
-                                                <Link href="#">Blocks</Link>
+                                                <Link href="#">AI机器人</Link>
                                             </NavigationMenuLink>
                                         </li>
                                     </ul>
@@ -335,14 +333,14 @@ export default function Header() {
                         </NavigationMenuList>
                     </NavigationMenu>
                     {/* 搜索 */}
-                    <Search className="cursor-pointer" />
+                    <Search className="cursor-pointer hover:scale-110 transition-all duration-300" />
                     {/* 主题切换 */}
                     <ThemeToggle />
                     {/* 多语言 */}
                     <DropdownMenu>
                         <DropdownMenuTrigger
                             asChild
-                            className="cursor-pointer border-none outline-none"
+                            className="cursor-pointer border-none outline-none hover:scale-110 transition-all duration-300"
                         >
                             <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
                         </DropdownMenuTrigger>
@@ -369,7 +367,7 @@ export default function Header() {
                                 alt="User"
                                 width={32}
                                 height={32}
-                                className="cursor-pointer rounded-full"
+                                className="cursor-pointer rounded-full hover:scale-110 transition-all duration-300"
                             />
                         </DropdownMenuTrigger>
                         <DropdownMenuContent sideOffset={5}>

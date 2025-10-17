@@ -95,7 +95,7 @@ export default function PC() {
                                                     setPageIndex(index + 1)
                                                 }
                                                 className={cn(
-                                                    'text-lg border border-gray-200 rounded-full p-4 hover:border-blue-500 hover:text-blue-500 transition-all duration-300 cursor-pointer',
+                                                    'text-lg border border-gray-200 rounded-full p-4 hover:border-blue-500 hover:text-blue-500 transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95',
                                                     index + 1 === pageIndex
                                                         ? 'border-blue-500 text-blue-500'
                                                         : ''
