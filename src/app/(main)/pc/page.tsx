@@ -1,5 +1,6 @@
 'use client'
 import AppList from '@/components/AppList'
+import AppGrid from '@/components/AppGrid'
 import SideList from '@/components/SideList'
 import {
     Pagination,
@@ -12,6 +13,7 @@ import {
 } from '@/components/ui/pagination'
 import { GridIcon, ListIcon } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
+import { useState } from 'react'
 
 export default function PC() {
     const pageNum = 10
@@ -19,6 +21,8 @@ export default function PC() {
     // 获取url参数
     const searchParams = useSearchParams()
     const type = searchParams.get('type')
+    // 布局
+    const [layout, setLayout] = useState<'grid' | 'list'>('list')
 
     return (
         <>
@@ -26,8 +30,8 @@ export default function PC() {
                 {/* left main */}
                 <div className="w-4/5">
                     {/* 顶部筛选条件 */}
-                    <div className="flex justify-between">
-                        <div className="flex items-end gap-4 py-4">
+                    <div className="flex justify-between py-4">
+                        <div className="flex items-end gap-4">
                             <h1 className="text-2xl font-bold">{type}软件</h1>
                             <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
                                 最新
@@ -52,14 +56,24 @@ export default function PC() {
                             </span>
                         </div>
                         {/* 布局 */}
-                        <div className="flex items-center gap-2 text-gray-500">
-                            <GridIcon className="cursor-pointer" />
-                            <ListIcon className="cursor-pointer" />
+                        <div className="flex items-end gap-2 text-gray-500">
+                            <GridIcon
+                                className={`hover:text-primary cursor-pointer ${
+                                    layout === 'grid' ? 'text-primary' : ''
+                                }`}
+                                onClick={() => setLayout('grid')}
+                            />
+                            <ListIcon
+                                className={`hover:text-primary cursor-pointer ${
+                                    layout === 'list' ? 'text-primary' : ''
+                                }`}
+                                onClick={() => setLayout('list')}
+                            />
                         </div>
                     </div>
                     {/* 中间展示列表 */}
                     <div className="">
-                        <AppList />
+                        {layout === 'grid' ? <AppGrid /> : <AppList />}
                     </div>
                     {/* 底部分页导航 */}
                     <div className="py-4 text-2xl">
