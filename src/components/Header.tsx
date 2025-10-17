@@ -30,12 +30,15 @@ import {
     Search,
     SunIcon,
     UserIcon,
+    MenuIcon,
+    XIcon,
 } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { Button } from './ui/button'
 import { DropdownMenuItem } from '@radix-ui/react-dropdown-menu'
 import { useState } from 'react'
 import { Input } from './ui/input'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -90,6 +93,7 @@ export default function Header() {
     return (
         <header className="py-5 sticky top-0 z-50 shadow-md bg-background">
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+                {/* Logo Section */}
                 <div
                     className="flex items-center justify-between cursor-pointer"
                     onClick={() => router.push('/')}
@@ -103,299 +107,228 @@ export default function Header() {
                     />
                     <div className="ml-2">
                         <h1 className="font-bold">PakeStore</h1>
-                        <p className="text-muted-foreground text-sm">
+                        <p className="text-muted-foreground text-sm hidden sm:block">
                             开源应用商店
                         </p>
                     </div>
-                    {/* search */}
-                    {/* <Input
-                    type="text"
-                    placeholder="Search for app"
-                    className="w-84 ml-4 border-1 "
-                /> */}
                 </div>
+
+                {/* Right Side Actions */}
                 <div className="flex items-center gap-4">
-                    {/* menu items */}
-                    <NavigationMenu viewport={false}>
-                        <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-md font-bold">
-                                    首页
-                                </NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                                        <li className="row-span-3">
-                                            <NavigationMenuLink asChild>
-                                                <a
-                                                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                                                    href="/"
-                                                >
-                                                    <div className="mt-4 mb-2 text-lg font-medium">
-                                                        shadcn/ui
-                                                    </div>
-                                                    <p className="text-muted-foreground text-sm leading-tight">
-                                                        Beautifully designed
-                                                        components built with
-                                                        Tailwind CSS.
-                                                    </p>
-                                                </a>
-                                            </NavigationMenuLink>
-                                        </li>
-                                        <ListItem
-                                            href="/docs"
-                                            title="Introduction"
-                                        >
-                                            Re-usable components built using
-                                            Radix UI and Tailwind CSS.
-                                        </ListItem>
-                                        <ListItem
-                                            href="/docs/installation"
-                                            title="Installation"
-                                        >
-                                            How to install dependencies and
-                                            structure your app.
-                                        </ListItem>
-                                        <ListItem
-                                            href="/docs/primitives/typography"
-                                            title="Typography"
-                                        >
-                                            Styles for headings, paragraphs,
-                                            lists...etc
-                                        </ListItem>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-md font-bold">
-                                    电脑应用
-                                </NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/pc?type=Mac">
-                                                    <div className="font-medium">
-                                                        Mac
-                                                    </div>
-                                                    <div className="text-muted-foreground">
-                                                        苹果电脑应用
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/pc?type=Windows">
-                                                    <div className="font-medium">
-                                                        Windows
-                                                    </div>
-                                                    <div className="text-muted-foreground">
-                                                        微软电脑应用
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/pc?type=Linux">
-                                                    <div className="font-medium">
-                                                        Linux
-                                                    </div>
-                                                    <div className="text-muted-foreground">
-                                                        ubuntu电脑应用
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-md font-bold">
-                                    手机应用
-                                </NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/mobile?type=iOS">
-                                                    <div className="font-medium">
-                                                        iOS
-                                                    </div>
-                                                    <div className="text-muted-foreground">
-                                                        苹果手机和ipad应用
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/mobile?type=Android">
-                                                    <div className="font-medium">
-                                                        Android
-                                                    </div>
-                                                    <div className="text-muted-foreground">
-                                                        安卓手机和平板应用
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            {/* <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-md font-bold">
-                                    其他设备
-                                </NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">智能家居</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">AI产品</Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">AI工具</Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-md font-bold">
-                                    AI工具集
-                                </NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link
-                                                    href="#"
-                                                    className="flex-row items-center gap-2"
-                                                >
-                                                    <CircleHelpIcon />
-                                                    Backlog
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link
-                                                    href="#"
-                                                    className="flex-row items-center gap-2"
-                                                >
-                                                    <CircleIcon />
-                                                    To Do
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link
-                                                    href="#"
-                                                    className="flex-row items-center gap-2"
-                                                >
-                                                    <CircleCheckIcon />
-                                                    Done
-                                                </Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem> */}
-                            {/* <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-md font-bold">
-                                    编程开发
-                                </NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/mobile?type=iOS">
-                                                    <div className="font-medium">
-                                                        新手教程
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/mobile?type=Android">
-                                                    <div className="font-medium">
-                                                        前端教程
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/mobile?type=Android">
-                                                    <div className="font-medium">
-                                                        后端教程
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/mobile?type=Android">
-                                                    <div className="font-medium">
-                                                        自动化教程
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem> */}
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-md font-bold">
-                                    博客文章
-                                </NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/mobile?type=iOS">
-                                                    <div className="font-medium">
-                                                        技术分享
-                                                    </div>
-                                                    <div className="text-muted-foreground">
-                                                        前沿技术分享
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="/mobile?type=Android">
-                                                    <div className="font-medium">
-                                                        生活经验
-                                                    </div>
-                                                    <div className="text-muted-foreground">
-                                                        生活经验交流
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
-                    {/* 搜索 */}
-                    <Input
-                        type="text"
-                        placeholder="搜索应用"
-                        className="w-64 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-blue-500 transition-all duration-300 hover:scale-101"
-                    />
-                    {/* 主题切换 */}
+                    {/* Desktop Navigation */}
+                    <div className="hidden lg:flex items-center gap-4">
+                        <NavigationMenu viewport={false}>
+                            <NavigationMenuList>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger className="text-md font-bold">
+                                        首页
+                                    </NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                                            <li className="row-span-3">
+                                                <NavigationMenuLink asChild>
+                                                    <a
+                                                        className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
+                                                        href="/"
+                                                    >
+                                                        <div className="mt-4 mb-2 text-lg font-medium">
+                                                            shadcn/ui
+                                                        </div>
+                                                        <p className="text-muted-foreground text-sm leading-tight">
+                                                            Beautifully designed
+                                                            components built
+                                                            with Tailwind CSS.
+                                                        </p>
+                                                    </a>
+                                                </NavigationMenuLink>
+                                            </li>
+                                            <ListItem
+                                                href="/docs"
+                                                title="Introduction"
+                                            >
+                                                Re-usable components built using
+                                                Radix UI and Tailwind CSS.
+                                            </ListItem>
+                                            <ListItem
+                                                href="/docs/installation"
+                                                title="Installation"
+                                            >
+                                                How to install dependencies and
+                                                structure your app.
+                                            </ListItem>
+                                            <ListItem
+                                                href="/docs/primitives/typography"
+                                                title="Typography"
+                                            >
+                                                Styles for headings, paragraphs,
+                                                lists...etc
+                                            </ListItem>
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger className="text-md font-bold">
+                                        电脑应用
+                                    </NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid w-[200px] gap-4">
+                                            <li>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href="/pc?type=Mac">
+                                                        <div className="font-medium">
+                                                            Mac
+                                                        </div>
+                                                        <div className="text-muted-foreground">
+                                                            苹果电脑应用
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href="/pc?type=Windows">
+                                                        <div className="font-medium">
+                                                            Windows
+                                                        </div>
+                                                        <div className="text-muted-foreground">
+                                                            微软电脑应用
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href="/pc?type=Linux">
+                                                        <div className="font-medium">
+                                                            Linux
+                                                        </div>
+                                                        <div className="text-muted-foreground">
+                                                            ubuntu电脑应用
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
+                                            </li>
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger className="text-md font-bold">
+                                        手机应用
+                                    </NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid w-[200px] gap-4">
+                                            <li>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href="/mobile?type=iOS">
+                                                        <div className="font-medium">
+                                                            iOS
+                                                        </div>
+                                                        <div className="text-muted-foreground">
+                                                            苹果手机和ipad应用
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href="/mobile?type=Android">
+                                                        <div className="font-medium">
+                                                            Android
+                                                        </div>
+                                                        <div className="text-muted-foreground">
+                                                            安卓手机和平板应用
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
+                                            </li>
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger className="text-md font-bold">
+                                        博客文章
+                                    </NavigationMenuTrigger>
+                                    <NavigationMenuContent>
+                                        <ul className="grid w-[200px] gap-4">
+                                            <li>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href="/mobile?type=iOS">
+                                                        <div className="font-medium">
+                                                            技术分享
+                                                        </div>
+                                                        <div className="text-muted-foreground">
+                                                            前沿技术分享
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href="/mobile?type=Android">
+                                                        <div className="font-medium">
+                                                            生活经验
+                                                        </div>
+                                                        <div className="text-muted-foreground">
+                                                            生活经验交流
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
+                                            </li>
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                            </NavigationMenuList>
+                        </NavigationMenu>
+                    </div>
+
+                    {/* Search Bar - Desktop */}
+                    <div className="hidden md:flex">
+                        <Input
+                            type="text"
+                            placeholder="搜索应用"
+                            className="w-64 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-blue-500 transition-all duration-300 hover:scale-101"
+                        />
+                    </div>
+
+                    {/* Search Icon - Mobile */}
+                    <div className="md:hidden">
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <Button variant="ghost" size="icon">
+                                    <Search className="h-5 w-5" />
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end" className="w-80">
+                                <div className="p-2">
+                                    <Input
+                                        type="text"
+                                        placeholder="搜索应用"
+                                        className="w-full"
+                                    />
+                                </div>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                    </div>
+
+                    {/* Theme Toggle */}
                     <ThemeToggle />
-                    {/* 多语言 */}
-                    <DropdownMenu>
-                        <DropdownMenuTrigger
-                            asChild
-                            className="cursor-pointer border-none outline-none hover:scale-110 transition-all duration-300 active:scale-95"
-                        >
-                            <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent sideOffset={5}>
-                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
-                                <div className="px-2 py-2">简体中文</div>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
-                                <div className="px-2 py-2">繁体中文</div>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
-                                <div className="px-2 py-2">English</div>
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-                    {/* 用户Icon */}
+
+                    {/* Language Selector */}
+                    <div className="hidden sm:block">
+                        <DropdownMenu>
+                            <DropdownMenuTrigger
+                                asChild
+                                className="cursor-pointer border-none outline-none hover:scale-110 transition-all duration-300 active:scale-95"
+                            >
+                                <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent sideOffset={5}>
+                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                    <div className="px-2 py-2">简体中文</div>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                    <div className="px-2 py-2">繁体中文</div>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                    <div className="px-2 py-2">English</div>
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                    </div>
+
+                    {/* User Menu */}
                     <DropdownMenu>
                         <DropdownMenuTrigger
                             asChild
@@ -421,9 +354,105 @@ export default function Header() {
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
+
+                    {/* Mobile Menu Button */}
+                    <div className="lg:hidden">
+                        <Sheet>
+                            <SheetTrigger asChild>
+                                <Button variant="ghost" size="icon">
+                                    <MenuIcon className="h-6 w-6" />
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent side="right" className="w-80 sm:w-96">
+                                <div className="flex flex-col h-full">
+                                    {/* Mobile Navigation */}
+                                    <div className="flex-1 py-6">
+                                        <nav className="grid gap-6">
+                                            <MobileNavItem
+                                                title="首页"
+                                                href="/"
+                                            />
+                                            <MobileNavSection title="电脑应用">
+                                                <MobileNavItem
+                                                    title="Mac"
+                                                    href="/pc?type=Mac"
+                                                />
+                                                <MobileNavItem
+                                                    title="Windows"
+                                                    href="/pc?type=Windows"
+                                                />
+                                                <MobileNavItem
+                                                    title="Linux"
+                                                    href="/pc?type=Linux"
+                                                />
+                                            </MobileNavSection>
+                                            <MobileNavSection title="手机应用">
+                                                <MobileNavItem
+                                                    title="iOS"
+                                                    href="/mobile?type=iOS"
+                                                />
+                                                <MobileNavItem
+                                                    title="Android"
+                                                    href="/mobile?type=Android"
+                                                />
+                                            </MobileNavSection>
+                                            <MobileNavSection title="博客文章">
+                                                <MobileNavItem
+                                                    title="技术分享"
+                                                    href="/blog/tech"
+                                                />
+                                                <MobileNavItem
+                                                    title="生活经验"
+                                                    href="/blog/life"
+                                                />
+                                            </MobileNavSection>
+                                        </nav>
+                                    </div>
+
+                                    {/* Mobile Search */}
+                                    <div className="p-4 border-t">
+                                        <Input
+                                            type="text"
+                                            placeholder="搜索应用"
+                                            className="w-full"
+                                        />
+                                    </div>
+                                </div>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
                 </div>
             </div>
         </header>
+    )
+}
+
+// Mobile Navigation Components
+function MobileNavItem({ title, href }: { title: string; href: string }) {
+    return (
+        <Link
+            href={href}
+            className="flex items-center rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+        >
+            {title}
+        </Link>
+    )
+}
+
+function MobileNavSection({
+    title,
+    children,
+}: {
+    title: string
+    children: React.ReactNode
+}) {
+    return (
+        <div className="grid gap-2">
+            <div className="px-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                {title}
+            </div>
+            {children}
+        </div>
     )
 }
 
