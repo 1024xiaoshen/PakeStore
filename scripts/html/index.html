@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>颜色展示</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @import 'tailwindcss';
+            @import 'tw-animate-css';
+
+            @custom-variant dark (&:is(.dark *));
+
+            @theme inline {
+                --color-background: var(--background);
+                --color-foreground: var(--foreground);
+                --font-sans: var(--font-geist-sans);
+                --font-mono: var(--font-geist-mono);
+                --color-sidebar-ring: var(--sidebar-ring);
+                --color-sidebar-border: var(--sidebar-border);
+                --color-sidebar-accent-foreground: var(
+                    --sidebar-accent-foreground
+                );
+                --color-sidebar-accent: var(--sidebar-accent);
+                --color-sidebar-primary-foreground: var(
+                    --sidebar-primary-foreground
+                );
+                --color-sidebar-primary: var(--sidebar-primary);
+                --color-sidebar-foreground: var(--sidebar-foreground);
+                --color-sidebar: var(--sidebar);
+                --color-chart-5: var(--chart-5);
+                --color-chart-4: var(--chart-4);
+                --color-chart-3: var(--chart-3);
+                --color-chart-2: var(--chart-2);
+                --color-chart-1: var(--chart-1);
+                --color-ring: var(--ring);
+                --color-input: var(--input);
+                --color-border: var(--border);
+                --color-destructive: var(--destructive);
+                --color-accent-foreground: var(--accent-foreground);
+                --color-accent: var(--accent);
+                --color-muted-foreground: var(--muted-foreground);
+                --color-muted: var(--muted);
+                --color-secondary-foreground: var(--secondary-foreground);
+                --color-secondary: var(--secondary);
+                --color-primary-foreground: var(--primary-foreground);
+                --color-primary: var(--primary);
+                --color-popover-foreground: var(--popover-foreground);
+                --color-popover: var(--popover);
+                --color-card-foreground: var(--card-foreground);
+                --color-card: var(--card);
+                --radius-sm: calc(var(--radius) - 4px);
+                --radius-md: calc(var(--radius) - 2px);
+                --radius-lg: var(--radius);
+                --radius-xl: calc(var(--radius) + 4px);
+            }
+
+            /* scrollbar */
+            ::-webkit-scrollbar {
+                width: 6px;
+                height: 6px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: transparent;
+                border-radius: 3px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #c0c4cc;
+                border-radius: 3px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #909399;
+            }
+
+            ::-webkit-scrollbar-corner {
+                background: transparent;
+            }
+
+            .dark ::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            .dark ::-webkit-scrollbar-thumb {
+                background: #4e4e52;
+            }
+
+            .dark ::-webkit-scrollbar-thumb:hover {
+                background: #6d6d70;
+            }
+
+            :root {
+                --radius: 0.625rem;
+                --background: oklch(1 0 0);
+                --foreground: oklch(0.145 0 0);
+                --card: oklch(1 0 0);
+                --card-foreground: oklch(0.145 0 0);
+                --popover: oklch(1 0 0);
+                --popover-foreground: oklch(0.145 0 0);
+                --primary: oklch(0.205 0 0);
+                --primary-foreground: oklch(0.985 0 0);
+                --secondary: oklch(0.97 0 0);
+                --secondary-foreground: oklch(0.205 0 0);
+                --muted: oklch(0.97 0 0);
+                --muted-foreground: oklch(0.556 0 0);
+                --accent: oklch(0.97 0 0);
+                --accent-foreground: oklch(0.205 0 0);
+                --destructive: oklch(0.577 0.245 27.325);
+                --border: oklch(0.922 0 0);
+                --input: oklch(0.922 0 0);
+                --ring: oklch(0.708 0 0);
+                --chart-1: oklch(0.646 0.222 41.116);
+                --chart-2: oklch(0.6 0.118 184.704);
+                --chart-3: oklch(0.398 0.07 227.392);
+                --chart-4: oklch(0.828 0.189 84.429);
+                --chart-5: oklch(0.769 0.188 70.08);
+                --sidebar: oklch(0.985 0 0);
+                --sidebar-foreground: oklch(0.145 0 0);
+                --sidebar-primary: oklch(0.205 0 0);
+                --sidebar-primary-foreground: oklch(0.985 0 0);
+                --sidebar-accent: oklch(0.97 0 0);
+                --sidebar-accent-foreground: oklch(0.205 0 0);
+                --sidebar-border: oklch(0.922 0 0);
+                --sidebar-ring: oklch(0.708 0 0);
+            }
+
+            .dark {
+                --background: oklch(0.145 0 0);
+                --foreground: oklch(0.985 0 0);
+                --card: oklch(0.205 0 0);
+                --card-foreground: oklch(0.985 0 0);
+                --popover: oklch(0.205 0 0);
+                --popover-foreground: oklch(0.985 0 0);
+                --primary: oklch(0.922 0 0);
+                --primary-foreground: oklch(0.205 0 0);
+                --secondary: oklch(0.269 0 0);
+                --secondary-foreground: oklch(0.985 0 0);
+                --muted: oklch(0.269 0 0);
+                --muted-foreground: oklch(0.708 0 0);
+                --accent: oklch(0.269 0 0);
+                --accent-foreground: oklch(0.985 0 0);
+                --destructive: oklch(0.704 0.191 22.216);
+                --border: oklch(1 0 0 / 10%);
+                --input: oklch(1 0 0 / 15%);
+                --ring: oklch(0.556 0 0);
+                --chart-1: oklch(0.488 0.243 264.376);
+                --chart-2: oklch(0.696 0.17 162.48);
+                --chart-3: oklch(0.769 0.188 70.08);
+                --chart-4: oklch(0.627 0.265 303.9);
+                --chart-5: oklch(0.645 0.246 16.439);
+                --sidebar: oklch(0.205 0 0);
+                --sidebar-foreground: oklch(0.985 0 0);
+                --sidebar-primary: oklch(0.488 0.243 264.376);
+                --sidebar-primary-foreground: oklch(0.985 0 0);
+                --sidebar-accent: oklch(0.269 0 0);
+                --sidebar-accent-foreground: oklch(0.985 0 0);
+                --sidebar-border: oklch(1 0 0 / 10%);
+                --sidebar-ring: oklch(0.556 0 0);
+            }
+
+            @layer base {
+                * {
+                    @apply border-border outline-ring/50;
+                }
+                body {
+                    @apply bg-background text-foreground;
+                }
+            }
+
+            .glass {
+                background: rgba(255, 255, 255, 0.25);
+                backdrop-filter: blur(100px);
+                -webkit-backdrop-filter: blur(100px);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+            }
+
+            .glass-dark {
+                background: rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(100px);
+                -webkit-backdrop-filter: blur(100px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        </style>
+    </head>
+    <body class="bg-background p-8">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-3xl font-bold mb-8 text-foreground">
+                颜色变量展示
+            </h1>
+
+            <!-- 主题切换按钮 -->
+            <button
+                onclick="toggleTheme()"
+                class="mb-6 px-4 py-2 bg-primary text-primary-foreground rounded-lg"
+            >
+                切换亮色/暗色主题
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 背景色 -->
+                <div class="p-4 rounded-lg border border-border">
+                    <h2 class="text-lg font-semibold mb-3">背景色</h2>
+                    <div class="space-y-3">
+                        <ColorCard
+                            colorName="background"
+                            className="bg-background text-foreground"
+                        />
+                        <ColorCard
+                            colorName="card"
+                            className="bg-card text-card-foreground"
+                        />
+                        <ColorCard
+                            colorName="popover"
+                            className="bg-popover text-popover-foreground"
+                        />
+                    </div>
+                </div>
+
+                <!-- 主要颜色 -->
+                <div class="p-4 rounded-lg border border-border">
+                    <h2 class="text-lg font-semibold mb-3">主要颜色</h2>
+                    <div class="space-y-3">
+                        <ColorCard
+                            colorName="primary"
+                            className="bg-primary text-primary-foreground"
+                        />
+                        <ColorCard
+                            colorName="secondary"
+                            className="bg-secondary text-secondary-foreground"
+                        />
+                        <ColorCard
+                            colorName="accent"
+                            className="bg-accent text-accent-foreground"
+                        />
+                    </div>
+                </div>
+
+                <!-- 状态颜色 -->
+                <div class="p-4 rounded-lg border border-border">
+                    <h2 class="text-lg font-semibold mb-3">状态颜色</h2>
+                    <div class="space-y-3">
+                        <ColorCard
+                            colorName="muted"
+                            className="bg-muted text-muted-foreground"
+                        />
+                        <ColorCard
+                            colorName="destructive"
+                            className="bg-destructive text-white"
+                        />
+                        <ColorCard
+                            colorName="border"
+                            className="bg-border text-foreground"
+                        />
+                    </div>
+                </div>
+
+                <!-- 图表颜色 -->
+                <div class="p-4 rounded-lg border border-border">
+                    <h2 class="text-lg font-semibold mb-3">图表颜色</h2>
+                    <div class="space-y-3">
+                        <ColorCard
+                            colorName="chart-1"
+                            className="bg-chart-1 text-white"
+                        />
+                        <ColorCard
+                            colorName="chart-2"
+                            className="bg-chart-2 text-white"
+                        />
+                        <ColorCard
+                            colorName="chart-3"
+                            className="bg-chart-3 text-white"
+                        />
+                        <ColorCard
+                            colorName="chart-4"
+                            className="bg-chart-4 text-white"
+                        />
+                        <ColorCard
+                            colorName="chart-5"
+                            className="bg-chart-5 text-white"
+                        />
+                    </div>
+                </div>
+
+                <!-- 侧边栏颜色 -->
+                <div class="p-4 rounded-lg border border-border">
+                    <h2 class="text-lg font-semibold mb-3">侧边栏颜色</h2>
+                    <div class="space-y-3">
+                        <ColorCard
+                            colorName="sidebar"
+                            className="bg-sidebar text-sidebar-foreground"
+                        />
+                        <ColorCard
+                            colorName="sidebar-primary"
+                            className="bg-sidebar-primary text-sidebar-primary-foreground"
+                        />
+                        <ColorCard
+                            colorName="sidebar-accent"
+                            className="bg-sidebar-accent text-sidebar-accent-foreground"
+                        />
+                    </div>
+                </div>
+
+                <!-- 其他颜色 -->
+                <div class="p-4 rounded-lg border border-border">
+                    <h2 class="text-lg font-semibold mb-3">其他颜色</h2>
+                    <div class="space-y-3">
+                        <ColorCard
+                            colorName="input"
+                            className="bg-input text-foreground"
+                        />
+                        <ColorCard
+                            colorName="ring"
+                            className="bg-ring text-white"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <!-- 玻璃态效果展示 -->
+            <div class="mt-8 p-6 rounded-lg border border-border">
+                <h2 class="text-xl font-semibold mb-4">玻璃态效果</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="glass p-6 rounded-lg text-center">
+                        <p class="text-foreground">亮色玻璃态效果</p>
+                    </div>
+                    <div class="glass-dark p-6 rounded-lg text-center">
+                        <p class="text-foreground">暗色玻璃态效果</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // 颜色卡片组件函数
+            function ColorCard({ colorName, className }) {
+                return `
+                <div class="${className} p-4 rounded-lg border border-border">
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">${colorName}</span>
+                        <span class="text-sm opacity-75">${getComputedStyle(
+                            document.documentElement
+                        ).getPropertyValue(`--${colorName}`)}</span>
+                    </div>
+                </div>
+            `
+            }
+
+            // 主题切换函数
+            function toggleTheme() {
+                const html = document.documentElement
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark')
+                } else {
+                    html.classList.add('dark')
+                }
+            }
+
+            // 初始化时渲染所有颜色卡片
+            document.addEventListener('DOMContentLoaded', function () {
+                // 这里使用innerHTML来渲染颜色卡片
+                const colorSections = document.querySelectorAll(
+                    '[data-color-section]'
+                )
+                colorSections.forEach((section) => {
+                    // 实际实现中可以通过JavaScript动态生成
+                })
+            })
+        </script>
+    </body>
+</html>

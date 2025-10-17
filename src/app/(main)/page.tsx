@@ -137,7 +137,7 @@ export default function Home() {
                 </div>
             </div>
             {/* 专题 */}
-            <div className="grid grid-cols-5 gap-4 mt-8">
+            <div className="grid grid-cols-5 gap-4 mt-8 mb-4">
                 <div className="card h-40 flex items-center justify-center rounded-xl text-2xl font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
                     新人必备
                 </div>
@@ -168,7 +168,7 @@ export default function Home() {
                     {essentialApps.map((item) => (
                         <div
                             key={item.id}
-                            className="h-30 bg-secondary border shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
+                            className="h-30 bg-background border border-secondary shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
                         >
                             <div className="flex items-center gap-4">
                                 <img
