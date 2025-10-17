@@ -71,9 +71,9 @@ export default function Home() {
     return (
         <div className="container mx-auto px-4 md:px-6 py-4">
             {/* 轮播图 */}
-            <div className="flex gap-4 h-100">
+            <div className="grid grid-cols-5 gap-4 h-100">
                 {/* left */}
-                <div className="w-3/5">
+                <div className="col-span-3">
                     {/* Carousel */}
                     <Carousel
                         plugins={[
@@ -112,7 +112,7 @@ export default function Home() {
                     </Carousel>
                 </div>
                 {/* right */}
-                <div className="w-2/5 flex flex-col">
+                <div className="col-span-2 flex flex-col">
                     {/* top */}
                     <div className="w-full h-3/5 pb-4">
                         <img
@@ -137,7 +137,7 @@ export default function Home() {
                 </div>
             </div>
             {/* 专题 */}
-            <div className="grid grid-cols-5 gap-4 mt-4">
+            <div className="grid grid-cols-5 gap-4 mt-8">
                 <div className="card h-40 flex items-center justify-center rounded-xl text-2xl font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
                     新人必备
                 </div>
