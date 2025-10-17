@@ -6,10 +6,69 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel'
+import Image from 'next/image'
 import { RocketIcon, ChevronRightIcon } from 'lucide-react'
 import Autoplay from 'embla-carousel-autoplay'
 
 export default function Home() {
+    // 必备应用
+    const essentialApps = [
+        {
+            id: 1,
+            title: '微信',
+            description: '社交聊天届的龙头',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+        },
+        {
+            id: 2,
+            title: 'QQ',
+            description: '社交聊天届的龙头',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+        },
+        {
+            id: 3,
+            title: 'QQ',
+            description: '社交聊天届的龙头',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+        },
+        {
+            id: 4,
+            title: 'QQ',
+            description: '社交聊天届的龙头',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+        },
+        {
+            id: 5,
+            title: 'QQ',
+            description: '社交聊天届的龙头',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+        },
+        {
+            id: 6,
+            title: 'QQ',
+            description: '社交聊天届的龙头',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+        },
+        {
+            id: 7,
+            title: 'QQ',
+            description: '社交聊天届的龙头',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+        },
+        {
+            id: 8,
+            title: 'QQ',
+            description: '社交聊天届的龙头',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+        },
+        {
+            id: 9,
+            title: 'QQ',
+            description: '社交聊天届的龙头',
+            image: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150',
+        },
+    ]
+
     return (
         <div className="container mx-auto px-4 md:px-6 py-4">
             {/* 轮播图 */}
@@ -26,24 +85,24 @@ export default function Home() {
                         opts={{ loop: true }}
                         className="w-full h-full rounded-lg overflow-hidden"
                     >
-                        <CarouselContent className="h-full">
+                        <CarouselContent className="h-full cursor-pointer">
                             <CarouselItem>
                                 <img
-                                    src="https://files.pakeplus.com/sponsor.webp"
+                                    src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqQCi00OjlLOPIu.iaIAqkKDd2lnPYvKM79BnhiJV81NRD9XY6QpMbgmc20Oyka.d1RnAQ8o0Sv_J4FhgNWPhmg078vbw0tTUkJtkdLLvM1Io0e0i3KZV4FYRNIw.RjySeQK94t0VF7Y_px4RLxRGXSA--&h=576"
                                     alt="Carousel 1"
                                     className="w-full h-full rounded-lg overflow-hidden"
                                 />
                             </CarouselItem>
                             <CarouselItem>
                                 <img
-                                    src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/8cc75f6e926c4ab493ccef093284e40f~tplv-a9rns2rl98-image.image?rcl=202510132129542CBCAD61CC48B2227BC0&rk3s=8e244e95&rrcfp=1db6ccd3&x-expires=1760966994&x-signature=pzDqPlmlDZGlRTZIMCo2XuqRfZM%3D"
+                                    src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqOSn8CPd90fsraRmDxWrhEZO2rwES0.r4Bu8hrBo4ans56CnzMYsJnpZVZAEMcnjYda1Bwx5mqClvTk2jTQpAhV._dV6MYikF0a6U6T9WeGXLfElzkKy3afFideaGHRl5GykrfMruL6NS6U6RnUgG9g--&h=576"
                                     alt="Carousel 2"
                                     className="w-full h-full rounded-lg overflow-hidden"
                                 />
                             </CarouselItem>
                             <CarouselItem>
                                 <img
-                                    src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/f4b020d3fafa4f4ea879fb63008df177~tplv-a9rns2rl98-image.image?rcl=202510132129541FAF3484354C47151FEB&rk3s=8e244e95&rrcfp=1db6ccd3&x-expires=1760966994&x-signature=IMymMN30mGS4I%2F5brXPKm2yWK8I%3D"
+                                    src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpq.vqLEWhLm6RfSPtPRLstcczS9PY4PzMPd1.9363AGmHSJt0_TyGuoXDcqcfbaMwqhQhMlDAYTHhQLBUYCRlpmMUfC8.10LAu_HGRc2mbBR48iEiUqQdZFuxLBm7Jkc5Z&h=576"
                                     alt="Carousel 3"
                                     className="w-full h-full rounded-lg overflow-hidden"
                                 />
@@ -58,22 +117,22 @@ export default function Home() {
                     {/* top */}
                     <div className="w-full h-3/5 pb-4">
                         <img
-                            src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/807827e6f737429384e27b0870fb1edf~tplv-a9rns2rl98-image.image?rcl=20251013212954C6DEB14F734CA503A2E2&rk3s=8e244e95&rrcfp=1db6ccd3&x-expires=1760966994&x-signature=EGk5Bj0iijys3kMGBKJ540jlgCA%3D"
+                            src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqCSbtOF5YFDZDFnmijK.J6q9cWbkYQAmWtfL_TuqdU_kz1xw5r83C5A84AK4m9yd_XIVGEpYfRdKswxH4uktA6zxLVpIkTnV09bls85dRoOUwICTmqBTX8WXnGU4j8PcD&h=576"
                             alt="Carousel 1"
-                            className="w-full h-full rounded-lg overflow-hidden"
+                            className="w-full h-full rounded-lg overflow-hidden cursor-pointer"
                         />
                     </div>
                     {/* bottom */}
                     <div className="w-full h-2/5 flex">
                         <img
-                            src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/f21b2f6e53ce41dcbaaf824bad894dc3~tplv-a9rns2rl98-image.image?rcl=20251013212954AEBF6301423923FB57EC&rk3s=8e244e95&rrcfp=1db6ccd3&x-expires=1760966994&x-signature=aaOJQJipXBI%2FoQGWUHWMrb%2FaHcI%3D"
+                            src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqaEGurlP7vBRHS3.OrJm3vUQarOg8C0.kkpsbh7qfsP5TjBt8uatInkPl4QoiqN6Pam4MGPZNujJK3hhKs11rCTJAaxodwJDc_CH0n9sguyIPIA1gvt_6hIX3yQeKaXJSOs0kX9JyWenxIYCrcHKW7Q--&h=576"
                             alt="Carousel 1"
-                            className="w-1/2 mr-2 rounded-lg overflow-hidden"
+                            className="w-1/2 mr-2 rounded-lg overflow-hidden cursor-pointer"
                         />
                         <img
-                            src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/71db5eeb63094665abc6a00e3addf418~tplv-a9rns2rl98-image.image?rcl=20251013212954D8AAB5FD6E625C03D8CA&rk3s=8e244e95&rrcfp=1db6ccd3&x-expires=1760966994&x-signature=il8EhL6MGKo4AjdXgTp6EBOX8pY%3D"
+                            src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqxUWfpl9URofPkQUyZFIMhCZw_p6JAcffI97rYbywnJ9Z3dd29VBxhpQ4yW3hIjGkk2YPDj2tWk7dT13imkgi.WTScyY_nkeANmS55VNJNzCcD.LID.kHxdX5SrELlbDrT4d0MrFcXPURqkLZus6pQQ--&h=576"
                             alt="Carousel 1"
-                            className="w-1/2 ml-2 rounded-lg overflow-hidden"
+                            className="w-1/2 ml-2 rounded-lg overflow-hidden cursor-pointer"
                         />
                     </div>
                 </div>
@@ -107,15 +166,40 @@ export default function Home() {
                     <ChevronRightIcon />
                 </h2>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-orange-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
+                    {essentialApps.map((item) => (
+                        <div
+                            key={item.id}
+                            className="h-30 bg-background border border-secondary shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
+                        >
+                            <div className="flex items-center gap-4">
+                                <img
+                                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150"
+                                    alt="Carousel 1"
+                                    className="w-20 h-20 rounded-lg overflow-hidden cursor-pointer"
+                                />
+                                <div className="text-lg font-bold flex flex-col">
+                                    <span>微信</span>
+                                    <span className="text-sm text-gray-400">
+                                        社交聊天届的龙头
+                                    </span>
+                                    <span className="text-sm text-gray-400">
+                                        Version: V1.0.0
+                                    </span>
+                                </div>
+                            </div>
+                            {/* 下载 */}
+                            <div className="flex items-center justify-center">
+                                <a
+                                    href="https://www.baidu.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-bold"
+                                >
+                                    免费下载
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
             {/* 应用列表 */}
