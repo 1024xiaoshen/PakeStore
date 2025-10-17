@@ -250,15 +250,15 @@ export default function Home() {
                     <span>探索与发现</span>
                 </h2>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
                         这些工具你还不知道？
                     </div>
 
-                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
                         AI时代，你准备好了吗？
                     </div>
 
-                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
                         提升生产力，从这里开始！
                     </div>
                 </div>
@@ -355,15 +355,15 @@ export default function Home() {
                     <span>探索与发现</span>
                 </h2>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
                         AI提升效率？来这里！
                     </div>
 
-                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
                         有手就行？试试这个！
                     </div>
 
-                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                    <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
                         提高生产力，从这里开始！
                     </div>
                 </div>
