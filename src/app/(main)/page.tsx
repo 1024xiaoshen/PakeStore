@@ -180,10 +180,10 @@ export default function Home() {
                                 <div className="text-lg font-bold flex flex-col">
                                     <span>微信</span>
                                     <span className="text-sm text-gray-400">
-                                        社交聊天届的龙头
+                                        v1.0.0
                                     </span>
                                     <span className="text-sm text-gray-400">
-                                        Version: V1.0.0
+                                        社交聊天届的龙头
                                     </span>
                                 </div>
                             </div>
@@ -209,15 +209,40 @@ export default function Home() {
                     <ChevronRightIcon />
                 </h2>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-orange-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
+                    {essentialApps.map((item) => (
+                        <div
+                            key={item.id}
+                            className="h-30 bg-background border border-secondary shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
+                        >
+                            <div className="flex items-center gap-4">
+                                <img
+                                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150"
+                                    alt="Carousel 1"
+                                    className="w-20 h-20 rounded-lg overflow-hidden cursor-pointer"
+                                />
+                                <div className="text-lg font-bold flex flex-col">
+                                    <span>微信</span>
+                                    <span className="text-sm text-gray-400">
+                                        v1.0.0
+                                    </span>
+                                    <span className="text-sm text-gray-400">
+                                        社交聊天届的龙头
+                                    </span>
+                                </div>
+                            </div>
+                            {/* 下载 */}
+                            <div className="flex items-center justify-center">
+                                <a
+                                    href="https://www.baidu.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-bold"
+                                >
+                                    免费下载
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
             {/* 探索与发现 */}
@@ -244,15 +269,40 @@ export default function Home() {
                     <ChevronRightIcon />
                 </h2>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-orange-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
+                    {essentialApps.map((item) => (
+                        <div
+                            key={item.id}
+                            className="h-30 bg-background border border-secondary shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
+                        >
+                            <div className="flex items-center gap-4">
+                                <img
+                                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150"
+                                    alt="Carousel 1"
+                                    className="w-20 h-20 rounded-lg overflow-hidden cursor-pointer"
+                                />
+                                <div className="text-lg font-bold flex flex-col">
+                                    <span>微信</span>
+                                    <span className="text-sm text-gray-400">
+                                        v1.0.0
+                                    </span>
+                                    <span className="text-sm text-gray-400">
+                                        社交聊天届的龙头
+                                    </span>
+                                </div>
+                            </div>
+                            {/* 下载 */}
+                            <div className="flex items-center justify-center">
+                                <a
+                                    href="https://www.baidu.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-bold"
+                                >
+                                    免费下载
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
             {/* 应用列表 */}
@@ -262,15 +312,40 @@ export default function Home() {
                     <ChevronRightIcon />
                 </h2>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-orange-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
+                    {essentialApps.map((item) => (
+                        <div
+                            key={item.id}
+                            className="h-30 bg-background border border-secondary shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
+                        >
+                            <div className="flex items-center gap-4">
+                                <img
+                                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150"
+                                    alt="Carousel 1"
+                                    className="w-20 h-20 rounded-lg overflow-hidden cursor-pointer"
+                                />
+                                <div className="text-lg font-bold flex flex-col">
+                                    <span>微信</span>
+                                    <span className="text-sm text-gray-400">
+                                        v1.0.0
+                                    </span>
+                                    <span className="text-sm text-gray-400">
+                                        社交聊天届的龙头
+                                    </span>
+                                </div>
+                            </div>
+                            {/* 下载 */}
+                            <div className="flex items-center justify-center">
+                                <a
+                                    href="https://www.baidu.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-bold"
+                                >
+                                    免费下载
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
             {/* 探索与发现 */}
@@ -297,15 +372,40 @@ export default function Home() {
                     <ChevronRightIcon />
                 </h2>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-orange-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-pink-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-green-500 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-amber-300 flex items-center justify-center rounded-lg"></div>
-                    <div className="h-30 bg-blue-500 flex items-center justify-center rounded-lg"></div>
+                    {essentialApps.map((item) => (
+                        <div
+                            key={item.id}
+                            className="h-30 bg-background border border-secondary shadow-md p-4 flex justify-between items-center rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-3px]"
+                        >
+                            <div className="flex items-center gap-4">
+                                <img
+                                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxl33gjvYDEfZR.qiz4WDwgYuLSp2TY89.N9qLIZ2cFoU2UuVLrceRcXuJosVhPaax.HQPeAZtiPTZrFpSqBihfE-&format=source&w=150"
+                                    alt="Carousel 1"
+                                    className="w-20 h-20 rounded-lg overflow-hidden cursor-pointer"
+                                />
+                                <div className="text-lg font-bold flex flex-col">
+                                    <span>微信</span>
+                                    <span className="text-sm text-gray-400">
+                                        v1.0.0
+                                    </span>
+                                    <span className="text-sm text-gray-400">
+                                        社交聊天届的龙头
+                                    </span>
+                                </div>
+                            </div>
+                            {/* 下载 */}
+                            <div className="flex items-center justify-center">
+                                <a
+                                    href="https://www.baidu.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-bold"
+                                >
+                                    免费下载
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
