@@ -83,7 +83,7 @@ export default function Home() {
                             }),
                         ]}
                         opts={{ loop: true }}
-                        className="w-full h-full rounded-lg overflow-hidden"
+                        className="w-full h-full rounded-lg overflow-hidden hover:scale-103 transition-all duration-300"
                     >
                         <CarouselContent className="h-full cursor-pointer">
                             <CarouselItem>
@@ -119,7 +119,7 @@ export default function Home() {
                         <img
                             src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqCSbtOF5YFDZDFnmijK.J6q9cWbkYQAmWtfL_TuqdU_kz1xw5r83C5A84AK4m9yd_XIVGEpYfRdKswxH4uktA6zxLVpIkTnV09bls85dRoOUwICTmqBTX8WXnGU4j8PcD&h=576"
                             alt="Carousel 1"
-                            className="w-full h-full rounded-lg overflow-hidden cursor-pointer"
+                            className="w-full h-full rounded-lg overflow-hidden cursor-pointer hover:scale-103 transition-all duration-300"
                         />
                     </div>
                     {/* bottom */}
@@ -127,35 +127,35 @@ export default function Home() {
                         <img
                             src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqaEGurlP7vBRHS3.OrJm3vUQarOg8C0.kkpsbh7qfsP5TjBt8uatInkPl4QoiqN6Pam4MGPZNujJK3hhKs11rCTJAaxodwJDc_CH0n9sguyIPIA1gvt_6hIX3yQeKaXJSOs0kX9JyWenxIYCrcHKW7Q--&h=576"
                             alt="Carousel 1"
-                            className="w-1/2 mr-2 rounded-lg overflow-hidden cursor-pointer"
+                            className="w-1/2 mr-2 rounded-lg overflow-hidden cursor-pointer hover:scale-103 transition-all duration-300"
                         />
                         <img
                             src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqxUWfpl9URofPkQUyZFIMhCZw_p6JAcffI97rYbywnJ9Z3dd29VBxhpQ4yW3hIjGkk2YPDj2tWk7dT13imkgi.WTScyY_nkeANmS55VNJNzCcD.LID.kHxdX5SrELlbDrT4d0MrFcXPURqkLZus6pQQ--&h=576"
                             alt="Carousel 1"
-                            className="w-1/2 ml-2 rounded-lg overflow-hidden cursor-pointer"
+                            className="w-1/2 ml-2 rounded-lg overflow-hidden cursor-pointer hover:scale-103 transition-all duration-300"
                         />
                     </div>
                 </div>
             </div>
             {/* 专题 */}
             <div className="grid grid-cols-5 gap-4 mt-4">
-                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     新人必备
                 </div>
 
-                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     图像视频
                 </div>
 
-                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     生产力
                 </div>
 
-                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-red-300 to-pink-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-red-300 to-pink-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     游戏娱乐
                 </div>
 
-                <div className="card h-35 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-purple-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-purple-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     AI工具
                 </div>
             </div>
