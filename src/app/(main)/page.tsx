@@ -79,15 +79,25 @@ export default function Home() {
                 </div>
             </div>
             {/* 专题 */}
-            <div className="grid grid-cols-3 gap-4 mt-4">
-                <div className="h-40 bg-pink-500 flex items-center justify-center rounded-lg">
+            <div className="grid grid-cols-5 gap-4 mt-4">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     新人必备
                 </div>
-                <div className="h-40 bg-green-500 flex items-center justify-center rounded-lg">
+
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     图像视频
                 </div>
-                <div className="h-40 bg-amber-300 flex items-center justify-center rounded-lg">
+
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     生产力
+                </div>
+
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-red-300 to-pink-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                    游戏娱乐
+                </div>
+
+                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-purple-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                    AI工具
                 </div>
             </div>
             {/* 推荐应用 */}
