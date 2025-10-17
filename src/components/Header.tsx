@@ -173,17 +173,32 @@ export default function Header() {
                                         <li>
                                             <NavigationMenuLink asChild>
                                                 <Link href="/pc?type=Mac">
-                                                    Mac
+                                                    <div className="font-medium">
+                                                        Mac
+                                                    </div>
+                                                    <div className="text-muted-foreground">
+                                                        Browse all Mac apps
+                                                    </div>
                                                 </Link>
                                             </NavigationMenuLink>
                                             <NavigationMenuLink asChild>
                                                 <Link href="/pc?type=Windows">
-                                                    Windows
+                                                    <div className="font-medium">
+                                                        Windows
+                                                    </div>
+                                                    <div className="text-muted-foreground">
+                                                        Browse all Windows apps
+                                                    </div>
                                                 </Link>
                                             </NavigationMenuLink>
                                             <NavigationMenuLink asChild>
                                                 <Link href="/pc?type=Linux">
-                                                    Linux
+                                                    <div className="font-medium">
+                                                        Linux
+                                                    </div>
+                                                    <div className="text-muted-foreground">
+                                                        Browse all Linux apps
+                                                    </div>
                                                 </Link>
                                             </NavigationMenuLink>
                                         </li>
@@ -195,38 +210,25 @@ export default function Header() {
                                     手机应用
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="grid w-[300px] gap-4">
+                                    <ul className="grid w-[200px] gap-4">
                                         <li>
                                             <NavigationMenuLink asChild>
-                                                <Link href="#">
+                                                <Link href="/mobile?type=iOS">
                                                     <div className="font-medium">
-                                                        Components
+                                                        iOS
                                                     </div>
                                                     <div className="text-muted-foreground">
-                                                        Browse all components in
-                                                        the library.
+                                                        Browse all iOS apps
                                                     </div>
                                                 </Link>
                                             </NavigationMenuLink>
                                             <NavigationMenuLink asChild>
-                                                <Link href="#">
+                                                <Link href="/mobile?type=Android">
                                                     <div className="font-medium">
-                                                        Documentation
+                                                        Android
                                                     </div>
                                                     <div className="text-muted-foreground">
-                                                        Learn how to use the
-                                                        library.
-                                                    </div>
-                                                </Link>
-                                            </NavigationMenuLink>
-                                            <NavigationMenuLink asChild>
-                                                <Link href="#">
-                                                    <div className="font-medium">
-                                                        Blog
-                                                    </div>
-                                                    <div className="text-muted-foreground">
-                                                        Read our latest blog
-                                                        posts.
+                                                        Browse all Android apps
                                                     </div>
                                                 </Link>
                                             </NavigationMenuLink>
