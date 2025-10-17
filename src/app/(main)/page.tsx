@@ -139,32 +139,32 @@ export default function Home() {
             </div>
             {/* 专题 */}
             <div className="grid grid-cols-5 gap-4 mt-4">
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-2xl font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     新人必备
                 </div>
 
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-2xl font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     图像视频
                 </div>
 
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-2xl font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     生产力
                 </div>
 
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-red-300 to-pink-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-2xl font-bold text-white bg-gradient-to-br from-red-300 to-pink-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     游戏娱乐
                 </div>
 
-                <div className="card h-40 flex items-center justify-center rounded-xl text-lg font-bold text-white bg-gradient-to-br from-purple-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
+                <div className="card h-40 flex items-center justify-center rounded-xl text-2xl font-bold text-white bg-gradient-to-br from-purple-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none">
                     AI工具
                 </div>
             </div>
             {/* 推荐应用 */}
             <div className="mt-4">
-                <h2 className="text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500">
+                <div className="text-2xl font-bold flex justify-start items-center cursor-pointer hover:text-blue-500">
                     <span>必备应用</span>
                     <ChevronRightIcon />
-                </h2>
+                </div>
                 <div className="grid grid-cols-3 gap-4 mt-4">
                     {essentialApps.map((item) => (
                         <div
