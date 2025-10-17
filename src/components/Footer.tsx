@@ -20,7 +20,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl font-bold mb-4">PakeStore</h3>
                         <p className="text-gray-400 mb-6">
-                            发现最好的开源应用和项目，让你的创意被发现，让你的项目被应用。关注我们，提交你的应用和项目。
+                            发现最好的开源应用和项目，无广告无追踪无恶意软件。关注我们，提交你的应用和项目，让开源应用被更多人发现和使用。
                         </p>
                         <div className="flex space-x-4">
                             <Link
