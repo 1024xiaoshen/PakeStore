@@ -35,6 +35,7 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 import { Button } from './ui/button'
 import { DropdownMenuItem } from '@radix-ui/react-dropdown-menu'
 import { useState } from 'react'
+import { Input } from './ui/input'
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -236,7 +237,7 @@ export default function Header() {
                                     </ul>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
-                            <NavigationMenuItem>
+                            {/* <NavigationMenuItem>
                                 <NavigationMenuTrigger className="text-md font-bold">
                                     其他设备
                                 </NavigationMenuTrigger>
@@ -247,10 +248,10 @@ export default function Header() {
                                                 <Link href="#">智能家居</Link>
                                             </NavigationMenuLink>
                                             <NavigationMenuLink asChild>
-                                                <Link href="#">智能眼镜</Link>
+                                                <Link href="#">AI产品</Link>
                                             </NavigationMenuLink>
                                             <NavigationMenuLink asChild>
-                                                <Link href="#">AI机器人</Link>
+                                                <Link href="#">AI工具</Link>
                                             </NavigationMenuLink>
                                         </li>
                                     </ul>
@@ -293,7 +294,7 @@ export default function Header() {
                                         </li>
                                     </ul>
                                 </NavigationMenuContent>
-                            </NavigationMenuItem>
+                            </NavigationMenuItem> */}
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="text-md font-bold">
                                     编程开发
@@ -333,14 +334,18 @@ export default function Header() {
                         </NavigationMenuList>
                     </NavigationMenu>
                     {/* 搜索 */}
-                    <Search className="cursor-pointer hover:scale-110 transition-all duration-300" />
+                    <Input
+                        type="text"
+                        placeholder="搜索应用"
+                        className="w-64 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-blue-500 transition-all duration-300 hover:scale-101"
+                    />
                     {/* 主题切换 */}
                     <ThemeToggle />
                     {/* 多语言 */}
                     <DropdownMenu>
                         <DropdownMenuTrigger
                             asChild
-                            className="cursor-pointer border-none outline-none hover:scale-110 transition-all duration-300"
+                            className="cursor-pointer border-none outline-none hover:scale-110 transition-all duration-300 active:scale-95"
                         >
                             <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
                         </DropdownMenuTrigger>

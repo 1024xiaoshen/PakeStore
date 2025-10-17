@@ -23,13 +23,13 @@ export function ThemeToggle() {
         <>
             {theme === 'light' ? (
                 <MoonIcon
-                    className="cursor-pointer hover:scale-110 transition-all duration-300"
+                    className="cursor-pointer hover:scale-110 transition-all duration-300 active:scale-95"
                     size={24}
                     onClick={() => setTheme('dark')}
                 />
             ) : (
                 <SunIcon
-                    className="cursor-pointer hover:scale-110 transition-all duration-300"
+                    className="cursor-pointer hover:scale-110 transition-all duration-300 active:scale-95"
                     size={24}
                     onClick={() => setTheme('light')}
                 />
