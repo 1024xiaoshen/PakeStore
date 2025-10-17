@@ -6,7 +6,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel'
-import { RocketIcon, ChevronRightIcon } from 'lucide-react'
+import { ChevronRightIcon } from 'lucide-react'
 import Autoplay from 'embla-carousel-autoplay'
 
 export default function Home() {
