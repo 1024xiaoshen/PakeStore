@@ -104,7 +104,7 @@ export default function Header() {
                     <div className="ml-2">
                         <h1 className="font-bold">PakeStore</h1>
                         <p className="text-muted-foreground text-sm">
-                            开源的应用商店
+                            开源应用商店
                         </p>
                     </div>
                     {/* search */}
@@ -178,7 +178,7 @@ export default function Header() {
                                                         Mac
                                                     </div>
                                                     <div className="text-muted-foreground">
-                                                        Browse all Mac apps
+                                                        苹果电脑应用
                                                     </div>
                                                 </Link>
                                             </NavigationMenuLink>
@@ -188,7 +188,7 @@ export default function Header() {
                                                         Windows
                                                     </div>
                                                     <div className="text-muted-foreground">
-                                                        Browse all Windows apps
+                                                        微软电脑应用
                                                     </div>
                                                 </Link>
                                             </NavigationMenuLink>
@@ -198,7 +198,7 @@ export default function Header() {
                                                         Linux
                                                     </div>
                                                     <div className="text-muted-foreground">
-                                                        Browse all Linux apps
+                                                        ubuntu电脑应用
                                                     </div>
                                                 </Link>
                                             </NavigationMenuLink>
@@ -219,7 +219,7 @@ export default function Header() {
                                                         iOS
                                                     </div>
                                                     <div className="text-muted-foreground">
-                                                        Browse all iOS apps
+                                                        苹果手机和ipad应用
                                                     </div>
                                                 </Link>
                                             </NavigationMenuLink>
@@ -229,7 +229,7 @@ export default function Header() {
                                                         Android
                                                     </div>
                                                     <div className="text-muted-foreground">
-                                                        Browse all Android apps
+                                                        安卓手机和平板应用
                                                     </div>
                                                 </Link>
                                             </NavigationMenuLink>
@@ -295,39 +295,73 @@ export default function Header() {
                                     </ul>
                                 </NavigationMenuContent>
                             </NavigationMenuItem> */}
-                            <NavigationMenuItem>
+                            {/* <NavigationMenuItem>
                                 <NavigationMenuTrigger className="text-md font-bold">
                                     编程开发
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                        {components.map((component) => (
-                                            <ListItem
-                                                key={component.title}
-                                                title={component.title}
-                                                href={component.href}
-                                            >
-                                                {component.description}
-                                            </ListItem>
-                                        ))}
+                                    <ul className="grid w-[200px] gap-4">
+                                        <li>
+                                            <NavigationMenuLink asChild>
+                                                <Link href="/mobile?type=iOS">
+                                                    <div className="font-medium">
+                                                        新手教程
+                                                    </div>
+                                                </Link>
+                                            </NavigationMenuLink>
+                                            <NavigationMenuLink asChild>
+                                                <Link href="/mobile?type=Android">
+                                                    <div className="font-medium">
+                                                        前端教程
+                                                    </div>
+                                                </Link>
+                                            </NavigationMenuLink>
+                                            <NavigationMenuLink asChild>
+                                                <Link href="/mobile?type=Android">
+                                                    <div className="font-medium">
+                                                        后端教程
+                                                    </div>
+                                                </Link>
+                                            </NavigationMenuLink>
+                                            <NavigationMenuLink asChild>
+                                                <Link href="/mobile?type=Android">
+                                                    <div className="font-medium">
+                                                        自动化教程
+                                                    </div>
+                                                </Link>
+                                            </NavigationMenuLink>
+                                        </li>
                                     </ul>
                                 </NavigationMenuContent>
-                            </NavigationMenuItem>
+                            </NavigationMenuItem> */}
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="text-md font-bold">
                                     博客文章
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                        {components.map((component) => (
-                                            <ListItem
-                                                key={component.title}
-                                                title={component.title}
-                                                href={component.href}
-                                            >
-                                                {component.description}
-                                            </ListItem>
-                                        ))}
+                                    <ul className="grid w-[200px] gap-4">
+                                        <li>
+                                            <NavigationMenuLink asChild>
+                                                <Link href="/mobile?type=iOS">
+                                                    <div className="font-medium">
+                                                        技术分享
+                                                    </div>
+                                                    <div className="text-muted-foreground">
+                                                        前沿技术分享
+                                                    </div>
+                                                </Link>
+                                            </NavigationMenuLink>
+                                            <NavigationMenuLink asChild>
+                                                <Link href="/mobile?type=Android">
+                                                    <div className="font-medium">
+                                                        生活经验
+                                                    </div>
+                                                    <div className="text-muted-foreground">
+                                                        生活经验交流
+                                                    </div>
+                                                </Link>
+                                            </NavigationMenuLink>
+                                        </li>
                                     </ul>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
