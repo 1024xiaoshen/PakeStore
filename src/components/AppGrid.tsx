@@ -211,15 +211,16 @@ export default function AppGrid() {
             {appList.map((item) => (
                 <div
                     key={item.id}
-                    className="flex flex-col gap-4 items-center justify-center rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-6px]"
+                    className="flex flex-col gap-4 items-center justify-center rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-6px] border border-gray-200 bg-background cursor-pointer"
                 >
                     <Image
                         src={item.image}
                         alt={item.title}
                         width={100}
                         height={100}
+                        className="rounded-md"
                     />
-                    <div>
+                    <div className="flex flex-col gap-2">
                         <h1>{item.title}</h1>
                         <p>{item.description}</p>
                     </div>
