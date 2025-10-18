@@ -83,7 +83,7 @@ export default function SideList() {
                         className="rounded-md w-10 h-10 min-w-10 min-h-10"
                     />
                     <div className="flex flex-col">
-                        <h1 className="text-sm font-bold">{item.title}</h1>
+                        <h1 className="text-sm">{item.title}</h1>
                         <p className="text-sm text-gray-500">
                             打包网页/Vue/React打包网页/Vue/React
                         </p>

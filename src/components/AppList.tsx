@@ -214,20 +214,21 @@ export default function AppList() {
                         key={item.id}
                         className="flex justify-between items-center gap-2 py-4 px-2 rounded-md hover:bg-gray-200 cursor-pointer border-b border-gray-200 transition-all duration-300 hover:scale-101"
                     >
-                        <Image
-                            src="https://avatars.githubusercontent.com/u/56043599?v=4"
-                            alt="User"
-                            width={32}
-                            height={32}
-                            className="cursor-pointer rounded-md"
-                        />
                         {/* 标题 */}
-                        <div>
-                            <h1>标题</h1>
-                        </div>
-                        {/* 描述 */}
-                        <div>
-                            <p>描述</p>
+                        <div className="flex gap-4">
+                            <Image
+                                src="https://avatars.githubusercontent.com/u/56043599?v=4"
+                                alt="User"
+                                width={32}
+                                height={32}
+                                className="cursor-pointer rounded-md w-14 h-14"
+                            />
+                            <div className="flex flex-col items-start justify-center">
+                                <h1 className="text-lg">标题</h1>
+                                <p className="text-sm text-gray-500">
+                                    何必是网站，秒变桌面应用和手机应用
+                                </p>
+                            </div>
                         </div>
                         {/* 体积 */}
                         <div>

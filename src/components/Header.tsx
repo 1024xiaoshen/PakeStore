@@ -240,11 +240,21 @@ export default function Header() {
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <NavigationMenuTrigger className="text-md font-bold">
-                                        博客文章
+                                        网站博客
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         <ul className="grid w-[200px] gap-4">
                                             <li>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href="/mobile?type=iOS">
+                                                        <div className="font-medium">
+                                                            网站推荐
+                                                        </div>
+                                                        <div className="text-muted-foreground">
+                                                            网站推荐分享
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/mobile?type=iOS">
                                                         <div className="font-medium">
