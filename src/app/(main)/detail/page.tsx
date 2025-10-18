@@ -99,13 +99,27 @@ PakePlus 仅作为打包工具使用，不支持软件签名，打包后的软�
                     </div>
                 </div>
                 {/* 右侧图片 */}
-                <div className="flex justify-center items-center hover:scale-105 transition-all duration-300">
+                <div className="relative group">
+                    <div
+                        className="flex justify-center items-center transition-all duration-300 group-hover:blur-2xl"
+                        style={{
+                            backgroundImage:
+                                'url(https://web.pakeplus.com/assets/pakeplus-Cl_cn6fO.png)',
+                            backgroundSize: 'contain',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            width: '150px',
+                            height: '150px',
+                        }}
+                    ></div>
                     <Image
-                        src={'https://cdn.macwk.com/images/1752052438053.png'}
+                        src={
+                            'https://web.pakeplus.com/assets/pakeplus-Cl_cn6fO.png'
+                        }
                         alt="1"
                         width={150}
                         height={150}
-                        className="rounded-lg"
+                        className="rounded-lg hover:scale-105 transition-all duration-300 absolute top-0 left-0"
                     />
                 </div>
             </div>
