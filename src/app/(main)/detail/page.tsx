@@ -38,6 +38,15 @@ const DetailPage = () => {
 -   🍀 支持静态文件打包，将 Vue/React 等项目编译后的 dist 目录或者 index.html 丢进来即可成为客户端，何必是网站
 -   🐞 支持 debug 调试模式，无论是预览阶段还是发布阶段，都可以找到 bug 并消灭 bug
 -   💬 如果在你使用过程中遇到问题，随时可以加入我们的技术交流群咨询
+
+# PakePlus 简介
+
+PakePlus 是一个基于 Tauri2 和 Github 的打包工具，你也可以叫我 PP 或者 2P🫣，可以将任意网站/Vue/React 等项目的 dist 静态文件打包为跨平台桌面软件和手机软件，体积小巧(小于 5M)并且性能还高，而且 PakePlus 本身也才仅仅 8M 左右。  
+<span style="color:red">
+**注意：**
+现阶段避免大量使用导致 Github 服务器压力过大，PakePlus 已做限制：仅可创建 3 个项目，每小时可发布一次！详细原因请看：[PakePlus 为什么要做限制？](https://juejin.cn/post/7504461472237404214)  
+PakePlus 仅作为打包工具使用，不支持软件签名，打包后的软件仅限自己使用，请勿传播或商业用途，否则后果自负。
+</span>
     `
 
     return (
@@ -102,22 +111,22 @@ const DetailPage = () => {
             </div>
             {/* 特色 */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-4 sm:mt-4">
-                <div className="card flex flex-col items-center justify-center rounded-xl text-xl font-bold bg-gray-200 select-none shadow-lg text-center p-10 gap-3">
+                <div className="card flex flex-col items-center justify-center rounded-xl text-xl font-bold bg-background select-none shadow-lg text-center p-10 gap-3">
                     <span className="text-4xl">🎨</span>
                     <div className="">支持多种语言</div>
                     <div className="text-base text-start text-gray-500">
                         PakePlus 是开源免费的，你可以在 GitHub 上找到它的源代码
                     </div>
                 </div>
-                <div className="card flex flex-col items-center justify-center rounded-xl text-xl font-bold bg-gray-200 select-none shadow-lg text-center p-10 gap-3">
-                    <span className="text-4xl">🎨</span>
+                <div className="card flex flex-col items-center justify-center rounded-xl text-xl font-bold bg-background select-none shadow-lg text-center p-10 gap-3">
+                    <span className="text-4xl">🌍</span>
                     <div>支持多种语言</div>
                     <div className="text-base text-start text-gray-500">
                         PakePlus 是开源免费的，你可以在 GitHub 上找到它的源代码
                     </div>
                 </div>
-                <div className="card flex flex-col items-center justify-center rounded-xl text-xl font-bold bg-gray-200 select-none shadow-lg text-center p-10 gap-3">
-                    <span className="text-4xl">🎨</span>
+                <div className="card flex flex-col items-center justify-center rounded-xl text-xl font-bold bg-background select-none shadow-lg text-center p-10 gap-3">
+                    <span className="text-4xl">🌈</span>
                     <div>支持多种语言</div>
                     <div className="text-base text-start text-gray-500">
                         PakePlus 是开源免费的，你可以在 GitHub 上找到它的源代码
@@ -128,6 +137,38 @@ const DetailPage = () => {
             <div className="flex flex-col items-start justify-start gap-4 mt-10">
                 <h2 className="text-2xl font-bold">描述</h2>
                 <MarkdownRenderer content={markdownContent} />
+            </div>
+            {/* 其他信息 */}
+            <div className="flex flex-col gap-4 my-5 border border-gray-200 rounded-lg p-4 bg-background">
+                <h1 className="text-2xl font-bold borde-b border-gray-500 py-2">
+                    其他信息
+                </h1>
+                <div className="grid grid-cols-3 gap-4">
+                    <div className="">
+                        <div>发布者</div>
+                        <div>1024小神</div>
+                    </div>
+                    <div>
+                        <div>发布时间</div>
+                        <div>2025-01-01</div>
+                    </div>
+                    <div>
+                        <div>版本</div>
+                        <div>1.0.0</div>
+                    </div>
+                    <div>
+                        <div>体积大小</div>
+                        <div>100MB</div>
+                    </div>
+                    <div>
+                        <div>留言</div>
+                        <div>100</div>
+                    </div>
+                    <div>
+                        <div>更新时间</div>
+                        <div>2025-01-01</div>
+                    </div>
+                </div>
             </div>
         </div>
     )
