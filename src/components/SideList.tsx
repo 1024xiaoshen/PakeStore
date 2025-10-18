@@ -71,20 +71,23 @@ export default function SideList() {
     ]
 
     return (
-        <div className="flex flex-col gap-2 bg-background p-4 rounded-lg shadow-md">
+        <div className="flex flex-col gap-2 bg-background p-2 rounded-lg shadow-md">
             {sideList.map((item) => (
                 <div
                     key={item.id}
-                    className="flex gap-2 py-4 px-4 hover:bg-gray-200 border-b border-gray-200 rounded-md transition-all duration-300"
+                    className="flex items-center gap-2 py-4 px-2 hover:bg-gray-200 border-b border-gray-200 rounded-lg transition-all duration-300 cursor-pointer hover:scale-101"
                 >
-                    <Image
+                    <img
                         src={item.image}
                         alt={item.title}
-                        width={32}
-                        height={32}
-                        className="rounded-md"
+                        className="rounded-md w-10 h-10 min-w-10 min-h-10"
                     />
-                    <h1>{item.title}</h1>
+                    <div className="flex flex-col">
+                        <h1 className="text-sm font-bold">{item.title}</h1>
+                        <p className="text-sm text-gray-500">
+                            打包网页/Vue/React打包网页/Vue/React
+                        </p>
+                    </div>
                 </div>
             ))}
         </div>
