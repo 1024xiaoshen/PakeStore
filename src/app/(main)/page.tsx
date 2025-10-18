@@ -82,7 +82,7 @@ export default function Home() {
                             }),
                         ]}
                         opts={{ loop: true }}
-                        className="w-full h-full rounded-lg overflow-hidden hover:scale-103 transition-all duration-300 shadow-lg"
+                        className="w-full h-full rounded-lg overflow-hidden shadow-lg"
                     >
                         <CarouselContent className="h-full cursor-pointer">
                             <CarouselItem>
