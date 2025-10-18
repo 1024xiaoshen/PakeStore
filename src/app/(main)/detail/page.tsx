@@ -35,19 +35,34 @@ const DetailPage = () => {
                     </p>
                     {/* 按钮 */}
                     <div className="flex gap-4">
-                        <Button className="bg-blue-500 text-white" size="lg">
+                        <Button
+                            className="bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 active:scale-95"
+                            size="lg"
+                        >
                             Mac
                         </Button>
-                        <Button className="bg-blue-500 text-white" size="lg">
+                        <Button
+                            className="bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 active:scale-95"
+                            size="lg"
+                        >
                             Windows
                         </Button>
-                        <Button className="bg-blue-500 text-white" size="lg">
+                        <Button
+                            className="bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 active:scale-95"
+                            size="lg"
+                        >
                             Linux
                         </Button>
-                        <Button className="bg-blue-500 text-white" size="lg">
+                        <Button
+                            className="bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 active:scale-95"
+                            size="lg"
+                        >
                             iOS
                         </Button>
-                        <Button className="bg-blue-500 text-white" size="lg">
+                        <Button
+                            className="bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 active:scale-95"
+                            size="lg"
+                        >
                             Android
                         </Button>
                     </div>
@@ -86,6 +101,23 @@ const DetailPage = () => {
                         PakePlus 是开源免费的，你可以在 GitHub 上找到它的源代码
                     </div>
                 </div>
+            </div>
+            {/* 描述 */}
+            <div className="flex flex-col items-start justify-start gap-4 mt-10">
+                <h2 className="text-2xl font-bold">描述</h2>
+                <p className="text-start">
+                    1. PakePlus 是开源免费的，你可以在 GitHub 上找到它的源代码
+                </p>
+                <p className="text-start">
+                    2. PakePlus 是开源免费的，你可以在 GitHub 上找到它的源代码
+                </p>
+                <p className="text-start">
+                    3. PakePlus 是开源免费的，你可以在 GitHub 上找到它的源代码
+                </p>
+                <p className="text-start">
+                    4. 👻 PakePlus 只是一个极简的软件，用 Tauri
+                    替代旧的打包方式，支持跨平台桌面
+                </p>
             </div>
         </div>
     )
