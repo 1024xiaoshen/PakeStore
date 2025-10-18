@@ -8,8 +8,11 @@ import {
 } from '@/components/ui/carousel'
 import { ChevronRightIcon } from 'lucide-react'
 import Autoplay from 'embla-carousel-autoplay'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+    const router = useRouter()
+
     // 必备应用
     const essentialApps = [
         {
@@ -127,11 +130,13 @@ export default function Home() {
                             src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqaEGurlP7vBRHS3.OrJm3vUQarOg8C0.kkpsbh7qfsP5TjBt8uatInkPl4QoiqN6Pam4MGPZNujJK3hhKs11rCTJAaxodwJDc_CH0n9sguyIPIA1gvt_6hIX3yQeKaXJSOs0kX9JyWenxIYCrcHKW7Q--&h=576"
                             alt="Carousel 1"
                             className="w-1/2 object-cover rounded-lg overflow-hidden cursor-pointer hover:scale-103 transition-all duration-300 shadow-lg"
+                            onClick={() => router.push('/detail')}
                         />
                         <img
                             src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqxUWfpl9URofPkQUyZFIMhCZw_p6JAcffI97rYbywnJ9Z3dd29VBxhpQ4yW3hIjGkk2YPDj2tWk7dT13imkgi.WTScyY_nkeANmS55VNJNzCcD.LID.kHxdX5SrELlbDrT4d0MrFcXPURqkLZus6pQQ--&h=576"
                             alt="Carousel 1"
                             className="w-1/2 object-cover rounded-lg overflow-hidden cursor-pointer hover:scale-103 transition-all duration-300 shadow-lg"
+                            onClick={() => router.push('/detail')}
                         />
                     </div>
                 </div>
