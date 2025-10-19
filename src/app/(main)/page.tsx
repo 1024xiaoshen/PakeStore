@@ -143,7 +143,10 @@ export default function Home() {
             </div>
             {/* 专题 */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mt-6 sm:mt-8 mb-4">
-                <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-lg sm:text-xl md:text-2xl font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
+                <div
+                    className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-lg sm:text-xl md:text-2xl font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg"
+                    onClick={() => router.push('/topic?topic=1')}
+                >
                     新人必备
                 </div>
 

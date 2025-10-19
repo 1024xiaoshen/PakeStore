@@ -91,7 +91,7 @@ export default function Header() {
     }
 
     return (
-        <header className="py-5 sticky top-0 z-50 shadow-md bg-background">
+        <header className="py-4 sticky top-0 z-50 shadow-md bg-background">
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
                 {/* Logo Section */}
                 <div

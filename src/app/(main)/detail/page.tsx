@@ -3,7 +3,6 @@
 import { Button } from '@/components/ui/button'
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
-import Image from 'next/image'
 import ImgBlur from '@/components/ui/imgblur'
 import MarkdownRenderer from '@/components/MarkdownRenderer'
 
