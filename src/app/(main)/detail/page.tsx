@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
 import Image from 'next/image'
+import ImgBlur from '@/components/ui/imgblur'
 import MarkdownRenderer from '@/components/MarkdownRenderer'
 
 export default function Detail() {
@@ -99,29 +100,12 @@ PakePlus 仅作为打包工具使用，不支持软件签名，打包后的软�
                     </div>
                 </div>
                 {/* 右侧图片 */}
-                <div className="relative group">
-                    <div
-                        className="flex justify-center items-center transition-all duration-300 group-hover:blur-2xl"
-                        style={{
-                            backgroundImage:
-                                'url(https://web.pakeplus.com/assets/pakeplus-Cl_cn6fO.png)',
-                            backgroundSize: 'contain',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            width: '150px',
-                            height: '150px',
-                        }}
-                    ></div>
-                    <Image
-                        src={
-                            'https://web.pakeplus.com/assets/pakeplus-Cl_cn6fO.png'
-                        }
-                        alt="1"
-                        width={150}
-                        height={150}
-                        className="rounded-lg hover:scale-105 transition-all duration-300 absolute top-0 left-0"
-                    />
-                </div>
+                <ImgBlur
+                    src="https://web.pakeplus.com/assets/pakeplus-Cl_cn6fO.png"
+                    alt="1"
+                    width={150}
+                    height={150}
+                />
             </div>
             {/* 特色 */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-4 sm:mt-4">
