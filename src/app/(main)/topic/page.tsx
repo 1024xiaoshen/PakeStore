@@ -221,7 +221,7 @@ const TopicPage = () => {
     ]
 
     return (
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 py-4 pb-20">
             {/* 头部 */}
             <div className="flex justify-center items-center gap-40 my-16">
                 {/* 左侧标题和描述 */}
