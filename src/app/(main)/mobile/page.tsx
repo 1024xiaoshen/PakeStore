@@ -13,8 +13,9 @@ import {
 } from '@/components/ui/pagination'
 import { GridIcon, ListIcon } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
-import { useState, Suspense } from 'react'
+import { useState, Suspense, useEffect } from 'react'
 import { cn } from '@/lib/utils'
+import { supabase } from '@/lib/supabase/client'
 
 const SuspenseMobile = () => {
     const pageNum = 10
@@ -25,6 +26,21 @@ const SuspenseMobile = () => {
     const type = searchParams.get('type')
     // 布局
     const [layout, setLayout] = useState<'grid' | 'list'>('list')
+
+    //
+    const [apps, setApps] = useState<any[]>([])
+    useEffect(() => {
+        const fetchUsers = async () => {
+            const { data, error } = await supabase.from('apps').select('*')
+            if (error) {
+                console.log('supabase--', error)
+            } else {
+                console.log('apps----', data)
+                setApps(data)
+            }
+        }
+        fetchUsers()
+    }, [])
 
     return (
         <div className="container mx-auto px-4 md:px-6 flex gap-4">
