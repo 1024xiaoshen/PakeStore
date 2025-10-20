@@ -229,9 +229,6 @@ const TopicPage = () => {
                     <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-500 via-purple-400 to-purple-600 bg-clip-text text-transparent">
                         PakePlus
                     </h1>
-                    <h2 className="text-4xl font-bold">
-                        何必是网站，秒变桌面应用和手机应用
-                    </h2>
                     <p className="text-2xl">
                         打包网页/Vue/React项目为桌面/手机应用只需几分钟
                     </p>
