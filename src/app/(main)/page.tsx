@@ -74,7 +74,7 @@ export default function Home() {
     return (
         <div className="container mx-auto px-3 sm:px-4 md:px-6 py-4">
             {/* 轮播图 */}
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 sm:gap-4 h-auto lg:h-100">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 sm:gap-4">
                 {/* left */}
                 <div className="col-span-1 lg:col-span-3 h-48 sm:h-64 md:h-80 lg:h-full">
                     {/* Carousel */}
@@ -142,7 +142,7 @@ export default function Home() {
                 </div>
             </div>
             {/* 专题 */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mt-6 sm:mt-8 mb-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 sm:mt-4 mb-4">
                 <div
                     className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-lg sm:text-xl md:text-2xl font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg"
                     onClick={() => router.push('/topic?topic=1')}
