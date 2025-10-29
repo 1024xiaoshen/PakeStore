@@ -88,14 +88,6 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/products"
-                                    className="text-gray-400  transition-colors duration-300 flex items-center"
-                                >
-                                    <span className="mr-2">→</span>产品
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
                                     href="/contact"
                                     className="text-gray-400  transition-colors duration-300 flex items-center"
                                 >
