@@ -225,12 +225,12 @@ const TopicPage = () => {
             {/* 头部 */}
             <div className="flex justify-center items-center gap-40 my-16">
                 {/* 左侧标题和描述 */}
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 items-center justify-center">
                     <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-500 via-purple-400 to-purple-600 bg-clip-text text-transparent">
-                        PakePlus
+                        新人必备的应用
                     </h1>
                     <p className="text-2xl">
-                        打包网页/Vue/React项目为桌面/手机应用只需几分钟
+                        新人必备的应用，再也不用担心找不到应用了
                     </p>
                 </div>
             </div>
