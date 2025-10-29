@@ -81,7 +81,7 @@ export default function Home() {
                     <Carousel
                         plugins={[
                             Autoplay({
-                                delay: 3000,
+                                delay: 5000,
                             }),
                         ]}
                         opts={{ loop: true }}
