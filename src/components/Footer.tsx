@@ -19,42 +19,47 @@ const Footer = () => {
                     {/* 品牌和简介 */}
                     <div>
                         <h3 className="text-xl font-bold mb-4">PakeStore</h3>
-                        <p className="text-gray-400 mb-6 hover:text-primary">
+                        <p className="text-gray-400 mb-6">
                             发现最好的开源应用，无广告无追踪无恶意软件。关注我们，提交你的应用和项目，让开源应用被更多人发现和使用。
                         </p>
                         <div className="flex space-x-4">
                             <Link
                                 href="#"
-                                className="text-gray-400 transition-colors duration-300 hover:text-primary"
+                                className="text-gray-400 transition-colors duration-300"
                                 aria-label="Facebook"
+                                target="_blank"
                             >
                                 <XIcon size={20} />
                             </Link>
                             <Link
-                                href="#"
-                                className="text-gray-400 transition-colors duration-300 hover:text-primary"
-                                aria-label="Twitter"
+                                href="https://github.com/1024xiaoshen/PakeStore"
+                                className="text-gray-400 transition-colors duration-300"
+                                aria-label="Github"
+                                target="_blank"
                             >
                                 <GithubIcon size={20} />
                             </Link>
                             <Link
-                                href="#"
-                                className="text-gray-400 transition-colors duration-300 hover:text-primary"
-                                aria-label="Instagram"
+                                href="https://www.youtube.com/@1024xiaoshen"
+                                className="text-gray-400 transition-colors duration-300"
+                                aria-label="Youtube"
+                                target="_blank"
                             >
                                 <Youtube size={20} />
                             </Link>
                             <Link
-                                href="#"
-                                className="text-gray-400  transition-colors duration-300 hover:text-primary"
-                                aria-label="LinkedIn"
+                                href="mailto:1024xiaoshen@gmail.com"
+                                className="text-gray-400  transition-colors duration-300"
+                                aria-label="Email"
+                                target="_blank"
                             >
                                 <MailIcon size={20} />
                             </Link>
                             <Link
-                                href="#"
-                                className="text-gray-400  transition-colors duration-300 hover:text-primary"
-                                aria-label="LinkedIn"
+                                href="https://x.com/1024xiaoshen"
+                                className="text-gray-400  transition-colors duration-300"
+                                aria-label="Twitter"
+                                target="_blank"
                             >
                                 <Twitter size={20} />
                             </Link>
@@ -68,7 +73,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     href="/about"
-                                    className="text-gray-400  transition-colors duration-300 flex items-center hover:text-primary"
+                                    className="text-gray-400  transition-colors duration-300 flex items-center"
                                 >
                                     <span className="mr-2">→</span>关于我们
                                 </Link>
@@ -76,7 +81,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     href="/services"
-                                    className="text-gray-400  transition-colors duration-300 flex items-center hover:text-primary"
+                                    className="text-gray-400  transition-colors duration-300 flex items-center"
                                 >
                                     <span className="mr-2">→</span>服务
                                 </Link>
@@ -84,7 +89,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     href="/products"
-                                    className="text-gray-400  transition-colors duration-300 flex items-center hover:text-primary"
+                                    className="text-gray-400  transition-colors duration-300 flex items-center"
                                 >
                                     <span className="mr-2">→</span>产品
                                 </Link>
@@ -92,7 +97,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     href="/contact"
-                                    className="text-gray-400  transition-colors duration-300 flex items-center hover:text-primary"
+                                    className="text-gray-400  transition-colors duration-300 flex items-center"
                                 >
                                     <span className="mr-2">→</span>联系我们
                                 </Link>
