@@ -128,37 +128,36 @@ export default function Header() {
                                             <li className="row-span-3">
                                                 <NavigationMenuLink asChild>
                                                     <a
-                                                        className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
+                                                        className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md cursor-pointer"
                                                         href="/"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
                                                     >
                                                         <div className="mt-4 mb-2 text-lg font-medium">
-                                                            shadcn/ui
+                                                            PakeStore
                                                         </div>
                                                         <p className="text-muted-foreground text-sm leading-tight">
-                                                            Beautifully designed
-                                                            components built
-                                                            with Tailwind CSS.
+                                                            开源应用商店
                                                         </p>
                                                     </a>
                                                 </NavigationMenuLink>
                                             </li>
                                             <ListItem
-                                                href="/docs"
-                                                title="Introduction"
+                                                href="https://pakeplus.com/"
+                                                title="PakePlus"
                                             >
-                                                Re-usable components built using
-                                                Radix UI and Tailwind CSS.
+                                                打包网页/Vue/React项目为桌面/手机应用只需几分钟
                                             </ListItem>
                                             <ListItem
                                                 href="/docs/installation"
-                                                title="Installation"
+                                                title="TauriHub"
                                             >
                                                 How to install dependencies and
                                                 structure your app.
                                             </ListItem>
                                             <ListItem
                                                 href="/docs/primitives/typography"
-                                                title="Typography"
+                                                title="OpenPake"
                                             >
                                                 Styles for headings, paragraphs,
                                                 lists...etc
@@ -481,7 +480,7 @@ function ListItem({
     return (
         <li {...props}>
             <NavigationMenuLink asChild>
-                <Link href={href}>
+                <Link href={href} target="_blank" rel="noopener noreferrer">
                     <div className="text-sm leading-none font-medium">
                         {title}
                     </div>
