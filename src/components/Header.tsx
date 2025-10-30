@@ -134,10 +134,10 @@ export default function Header() {
                                                         rel="noopener noreferrer"
                                                     >
                                                         <div className="mt-4 mb-2 text-lg font-medium">
-                                                            PakeStore
+                                                            PakePlus
                                                         </div>
                                                         <p className="text-muted-foreground text-sm leading-tight">
-                                                            开源应用商店
+                                                            打包网页/Vue/React项目为桌面/手机应用只需几分钟
                                                         </p>
                                                     </a>
                                                 </NavigationMenuLink>

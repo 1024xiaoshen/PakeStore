@@ -211,7 +211,7 @@ export default function AppList() {
                 {appList.map((item) => (
                     <div
                         key={item.id}
-                        className="flex justify-between items-center gap-2 py-4 px-2 rounded-md hover:bg-gray-100 cursor-pointer border-b border-gray-200 transition-all duration-300 hover:scale-101"
+                        className="flex justify-between items-center gap-2 py-4 px-2  hover:bg-gray-100 cursor-pointer border-b border-gray-200 transition-all duration-300 hover:scale-102 hover:rounded-md hover:shadow-md"
                     >
                         {/* 标题 */}
                         <div className="flex gap-4">

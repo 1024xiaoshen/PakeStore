@@ -75,7 +75,7 @@ export default function SideList() {
             {sideList.map((item) => (
                 <div
                     key={item.id}
-                    className="flex items-center gap-2 py-4 px-2 hover:bg-gray-100 border-b border-gray-100 rounded-lg transition-all duration-300 cursor-pointer hover:scale-101"
+                    className="flex items-center gap-2 py-4 px-2 hover:bg-gray-100 border-b border-gray-100 transition-all duration-300 cursor-pointer hover:scale-102 hover:rounded-md hover:shadow-md"
                 >
                     <img
                         src={item.image}
