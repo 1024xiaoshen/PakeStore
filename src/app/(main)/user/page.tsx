@@ -71,20 +71,37 @@ export default function UserPage() {
             <div className="bg-background shadow-md w-full rounded-lg">
                 {/* 个人中心 */}
                 {active === 0 && (
-                    <div className="p-4 w-full">
+                    <div className="p-4 w-full flex items-center gap-2">
                         <div className="flex items-center gap-2">
                             <Image
                                 src="https://avatars.githubusercontent.com/u/56043599?v=4"
                                 alt="User"
-                                width={32}
-                                height={32}
-                                className="rounded-full"
+                                width={64}
+                                height={64}
+                                className="rounded-full w-16 h-16"
                             />
                         </div>
                         <div className="flex flex-col gap-2">
-                            <div className="text-2xl font-bold">个人中心</div>
-                            <div className="text-sm text-gray-500">
-                                个人中心
+                            <div className="text-2xl font-bold">1024小神</div>
+                            <div className="text-sm text-gray-500 flex items-center gap-2">
+                                <span>
+                                    <span className="text-primary font-bold">
+                                        505
+                                    </span>
+                                    <span className="pl-1">粉丝</span>
+                                </span>
+                                <span>
+                                    <span className="text-primary font-bold">
+                                        17
+                                    </span>
+                                    <span className="pl-1">关注</span>
+                                </span>
+                                <span>
+                                    <span className="text-primary font-bold">
+                                        10620
+                                    </span>
+                                    <span className="pl-1">掘力值</span>
+                                </span>
                             </div>
                         </div>
                     </div>
