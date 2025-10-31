@@ -100,7 +100,7 @@ export default function UserPage() {
                                     <span className="text-primary font-bold">
                                         10620
                                     </span>
-                                    <span className="pl-1">掘力值</span>
+                                    <span className="pl-1">积分</span>
                                 </span>
                             </div>
                         </div>
@@ -111,11 +111,11 @@ export default function UserPage() {
                 {/* 我的评论 */}
                 {active === 2 && <div className="p-4 w-full">我的评论</div>}
                 {/* 我的点赞 */}
-                {active === 3 && <div>我的点赞</div>}
+                {active === 3 && <div className="p-4 w-full">我的点赞</div>}
                 {/* 我的关注 */}
-                {active === 4 && <div>我的关注</div>}
+                {active === 4 && <div className="p-4 w-full">我的关注</div>}
                 {/* 提交应用 */}
-                {active === 5 && <div>提交应用</div>}
+                {active === 5 && <div className="p-4 w-full">提交应用</div>}
             </div>
         </div>
     )
