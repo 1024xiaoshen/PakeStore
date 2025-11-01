@@ -63,7 +63,7 @@ export default function Login() {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors duration-200"
+                        className="w-full py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition duration-200 cursor-pointer active:scale-95"
                     >
                         {loading ? '登陆中...' : '登 录'}
                     </button>
