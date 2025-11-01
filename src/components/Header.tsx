@@ -214,7 +214,7 @@ export default function Header() {
                                         <ul className="grid w-[200px] gap-4">
                                             <li>
                                                 <NavigationMenuLink asChild>
-                                                    <Link href="/mobile?type=iOS">
+                                                    <Link href="/phone?type=iOS">
                                                         <div className="font-medium">
                                                             iOS
                                                         </div>
@@ -224,7 +224,7 @@ export default function Header() {
                                                     </Link>
                                                 </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
-                                                    <Link href="/mobile?type=Android">
+                                                    <Link href="/phone?type=Android">
                                                         <div className="font-medium">
                                                             Android
                                                         </div>
@@ -245,7 +245,7 @@ export default function Header() {
                                         <ul className="grid w-[200px] gap-4">
                                             <li>
                                                 <NavigationMenuLink asChild>
-                                                    <Link href="/mobile?type=iOS">
+                                                    <Link href="/phone?type=iOS">
                                                         <div className="font-medium">
                                                             网站推荐
                                                         </div>
@@ -255,7 +255,7 @@ export default function Header() {
                                                     </Link>
                                                 </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
-                                                    <Link href="/mobile?type=iOS">
+                                                    <Link href="/phone?type=iOS">
                                                         <div className="font-medium">
                                                             技术分享
                                                         </div>
@@ -265,7 +265,7 @@ export default function Header() {
                                                     </Link>
                                                 </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
-                                                    <Link href="/mobile?type=Android">
+                                                    <Link href="/phone?type=Android">
                                                         <div className="font-medium">
                                                             生活经验
                                                         </div>
