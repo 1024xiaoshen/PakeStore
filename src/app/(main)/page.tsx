@@ -168,7 +168,7 @@ export default function Home() {
             </div>
             {/* 推荐应用 */}
             <div className="mt-4 sm:mt-6">
-                <div className="text-xl sm:text-2xl font-bold flex justify-start items-center cursor-pointer hover:text-blue-500">
+                <div className="text-xl sm:text-2xl font-bold flex justify-start items-center cursor-pointer hover:text-blue-500 w-30">
                     <span>必备应用</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
@@ -211,7 +211,7 @@ export default function Home() {
             </div>
             {/* 应用列表 */}
             <div className="mt-4 sm:mt-6">
-                <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500">
+                <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500 w-30">
                     <span>推荐应用</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </h2>
@@ -274,7 +274,7 @@ export default function Home() {
             {/* 重复的部分也应用相同的响应式样式 */}
             {/* 必备应用 */}
             <div className="mt-4 sm:mt-6">
-                <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500">
+                <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500 w-30">
                     <span>必备应用</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </h2>
@@ -317,7 +317,7 @@ export default function Home() {
             </div>
             {/* 推荐应用 */}
             <div className="mt-4 sm:mt-6">
-                <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500">
+                <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500 w-30">
                     <span>推荐应用</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </h2>
@@ -379,7 +379,7 @@ export default function Home() {
             </div>
             {/* 应用列表 */}
             <div className="mt-4 sm:mt-6">
-                <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500">
+                <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500 w-30">
                     <span>推荐应用</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </h2>
