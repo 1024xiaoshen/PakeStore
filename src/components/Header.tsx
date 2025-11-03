@@ -2,10 +2,7 @@
 import Image from 'next/image'
 import {
     DropdownMenu,
-    DropdownMenuCheckboxItem,
     DropdownMenuContent,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import useUserStore from '@/store/user'
@@ -18,21 +15,9 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 import Link from 'next/link'
-import {
-    CircleCheckIcon,
-    CircleHelpIcon,
-    CircleIcon,
-    GlobeIcon,
-    MoonIcon,
-    Search,
-    SunIcon,
-    UserIcon,
-    MenuIcon,
-    XIcon,
-} from 'lucide-react'
+import { Search, MenuIcon } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { Button } from './ui/button'
 import { DropdownMenuItem } from '@radix-ui/react-dropdown-menu'
