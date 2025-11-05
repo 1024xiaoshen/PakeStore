@@ -25,6 +25,31 @@ const SuspensePC = () => {
     const type = searchParams.get('type')
     // 布局
     const [layout, setLayout] = useState<'grid' | 'list'>('list')
+    // 分类
+    const categorys = [
+        {
+            name: '最新',
+            value: 'latest',
+        },
+        {
+            name: '免费',
+            value: 'free',
+        },
+        {
+            name: '热门',
+            value: 'hot',
+        },
+        {
+            name: '推荐',
+            value: 'recommend',
+        },
+        {
+            name: '评分',
+            value: 'score',
+        },
+    ]
+    // 分类选中
+    const [category, setCategory] = useState(categorys[0].value)
 
     return (
         <div className="container mx-auto px-4 md:px-6 flex gap-4">
@@ -34,27 +59,20 @@ const SuspensePC = () => {
                 <div className="flex justify-between py-4">
                     <div className="flex items-end gap-4">
                         <h1 className="text-2xl font-bold">{type}软件</h1>
-                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
-                            最新
-                        </span>
-                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
-                            免费
-                        </span>
-                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
-                            热门
-                        </span>
-                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
-                            推荐
-                        </span>
-                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
-                            评分
-                        </span>
-                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
-                            下载量
-                        </span>
-                        <span className="text-md text-gray-500 hover:text-primary cursor-pointer">
-                            更新时间
-                        </span>
+                        {categorys.map((item) => (
+                            <span
+                                key={item.value}
+                                className={cn(
+                                    'text-md text-gray-500 hover:text-primary cursor-pointer active:scale-95 transition-all duration-300',
+                                    category === item.value
+                                        ? 'text-primary border-b-2 border-primary'
+                                        : ''
+                                )}
+                                onClick={() => setCategory(item.value)}
+                            >
+                                {item.name}
+                            </span>
+                        ))}
                     </div>
                     {/* 布局 */}
                     <div className="flex items-end gap-2 text-gray-500">
