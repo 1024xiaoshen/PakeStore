@@ -67,7 +67,6 @@ export default function Header() {
     const userStore: any = useUserStore()
     const appStore: any = useAppStore()
     const router = useRouter()
-    const [isOpen, setIsOpen] = useState(false)
 
     const handleLogout = () => {
         userStore.setUser(false)
