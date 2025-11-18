@@ -29,17 +29,28 @@ const SuspenseMobile = () => {
 
     //
     const [apps, setApps] = useState<any[]>([])
-    useEffect(() => {
-        const fetchUsers = async () => {
-            const { data, error } = await supabase.from('apps').select('*')
-            if (error) {
-                console.log('supabase--', error)
-            } else {
-                console.log('apps----', data)
-                setApps(data)
-            }
+    const fetchUsers = async () => {
+        const { data, error } = await supabase.from('apps').select('*')
+        if (error) {
+            console.log('supabase--', error)
+        } else {
+            console.log('apps----', data)
+            setApps(data)
         }
-        fetchUsers()
+    }
+
+    const deleteApp = async (id: number) => {
+        const { error } = await supabase.from('apps').delete().eq('id', id)
+        if (error) {
+            console.log('supabase--', error)
+        } else {
+            console.log('delete success')
+        }
+    }
+
+    useEffect(() => {
+        // fetchUsers()
+        deleteApp(1)
     }, [])
 
     return (
