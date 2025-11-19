@@ -5,7 +5,6 @@ import SideList from '@/components/SideList'
 import {
     Pagination,
     PaginationContent,
-    PaginationEllipsis,
     PaginationItem,
     PaginationLink,
     PaginationNext,
