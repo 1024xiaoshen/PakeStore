@@ -217,6 +217,16 @@ export default function Header() {
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
+                                                <NavigationMenuLink asChild>
+                                                    <Link href="/phone?type=Android">
+                                                        <div className="font-medium">
+                                                            小程序
+                                                        </div>
+                                                        <div className="text-muted-foreground">
+                                                            微信小程序抖音小程序等
+                                                        </div>
+                                                    </Link>
+                                                </NavigationMenuLink>
                                             </li>
                                         </ul>
                                     </NavigationMenuContent>
