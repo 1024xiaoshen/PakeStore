@@ -74,7 +74,7 @@ export default function Login() {
                     </a>
                     <a
                         href="/register"
-                        className="text-blue-600 font-semibold hover:underline"
+                        className="text-blue-600 hover:underline"
                     >
                         注册新账号
                     </a>
