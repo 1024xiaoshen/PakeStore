@@ -318,13 +318,13 @@ export default function Header() {
                                 <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent sideOffset={5}>
-                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300">
                                     <div className="px-2 py-2">简体中文</div>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300">
                                     <div className="px-2 py-2">繁体中文</div>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300">
                                     <div className="px-2 py-2">English</div>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
@@ -347,16 +347,16 @@ export default function Header() {
                         </DropdownMenuTrigger>
                         <DropdownMenuContent sideOffset={5}>
                             <DropdownMenuItem
-                                className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300"
+                                className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300"
                                 onClick={() => router.push('/user')}
                             >
                                 <div className="px-2 py-2">个人中心</div>
                             </DropdownMenuItem>
-                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300">
+                            <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300">
                                 <div className="px-2 py-2">我的收藏</div>
                             </DropdownMenuItem>
                             <DropdownMenuItem
-                                className="cursor-pointer border-none outline-none hover:bg-gray-100 rounded-md transition-all duration-300"
+                                className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300"
                                 onClick={handleLogout}
                             >
                                 <div className="px-2 py-2">退出登陆</div>
