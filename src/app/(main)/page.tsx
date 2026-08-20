@@ -90,21 +90,21 @@ export default function Home() {
                         <CarouselContent className="h-full cursor-pointer">
                             <CarouselItem>
                                 <img
-                                    src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqQCi00OjlLOPIu.iaIAqkKDd2lnPYvKM79BnhiJV81NRD9XY6QpMbgmc20Oyka.d1RnAQ8o0Sv_J4FhgNWPhmg078vbw0tTUkJtkdLLvM1Io0e0i3KZV4FYRNIw.RjySeQK94t0VF7Y_px4RLxRGXSA--&h=576"
+                                    src="https://fastly.picsum.photos/id/236/500/300.jpg?hmac=fGvCeml4FIxcpy9Jty0B63GJJRiQuhROS3pFacIcveE"
                                     alt="Carousel 1"
                                     className="w-full h-full object-cover rounded-lg overflow-hidden"
                                 />
                             </CarouselItem>
                             <CarouselItem>
                                 <img
-                                    src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqOSn8CPd90fsraRmDxWrhEZO2rwES0.r4Bu8hrBo4ans56CnzMYsJnpZVZAEMcnjYda1Bwx5mqClvTk2jTQpAhV._dV6MYikF0a6U6T9WeGXLfElzkKy3afFideaGHRl5GykrfMruL6NS6U6RnUgG9g--&h=576"
+                                    src="https://fastly.picsum.photos/id/190/500/300.jpg?hmac=7lzFSZ5hFuRk-y3Yd-Gr7lePEYVjiTyu4433I7kzGyU"
                                     alt="Carousel 2"
                                     className="w-full h-full object-cover rounded-lg overflow-hidden"
                                 />
                             </CarouselItem>
                             <CarouselItem>
                                 <img
-                                    src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpq.vqLEWhLm6RfSPtPRLstcczS9PY4PzMPd1.9363AGmHSJt0_TyGuoXDcqcfbaMwqhQhMlDAYTHhQLBUYCRlpmMUfC8.10LAu_HGRc2mbBR48iEiUqQdZFuxLBm7Jkc5Z&h=576"
+                                    src="https://fastly.picsum.photos/id/255/500/300.jpg?hmac=ilA7i5K1LdjMfElx9BTIEkUBLc6Mf4dVcuJfSnL4IKw"
                                     alt="Carousel 3"
                                     className="w-full h-full object-cover rounded-lg overflow-hidden"
                                 />
@@ -119,7 +119,7 @@ export default function Home() {
                     {/* top */}
                     <div className="w-full h-32 sm:h-40 md:h-48 lg:h-3/5">
                         <img
-                            src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqCSbtOF5YFDZDFnmijK.J6q9cWbkYQAmWtfL_TuqdU_kz1xw5r83C5A84AK4m9yd_XIVGEpYfRdKswxH4uktA6zxLVpIkTnV09bls85dRoOUwICTmqBTX8WXnGU4j8PcD&h=576"
+                            src="https://fastly.picsum.photos/id/351/500/300.jpg?hmac=4CIB9tpNud0PVN8YgaqZ8QYlyTHAs53qGuvV6GQ-M84"
                             alt="Carousel 1"
                             className="w-full h-full object-cover rounded-lg overflow-hidden cursor-pointer hover:scale-103 transition-all duration-300 shadow-lg"
                         />
@@ -127,13 +127,13 @@ export default function Home() {
                     {/* bottom */}
                     <div className="w-full h-24 sm:h-32 md:h-40 lg:h-2/5 flex gap-2 sm:gap-4">
                         <img
-                            src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqaEGurlP7vBRHS3.OrJm3vUQarOg8C0.kkpsbh7qfsP5TjBt8uatInkPl4QoiqN6Pam4MGPZNujJK3hhKs11rCTJAaxodwJDc_CH0n9sguyIPIA1gvt_6hIX3yQeKaXJSOs0kX9JyWenxIYCrcHKW7Q--&h=576"
+                            src="https://fastly.picsum.photos/id/915/500/300.jpg?hmac=vC9tMMDfjS7KDyJdroe8IMeb3Bt6b36GB0G10ra2yzg"
                             alt="Carousel 1"
                             className="w-1/2 object-cover rounded-lg overflow-hidden cursor-pointer hover:scale-103 transition-all duration-300 shadow-lg"
                             onClick={() => router.push('/detail')}
                         />
                         <img
-                            src="https://images-eds-ssl.xboxlive.com/image?url=7flt5HU26ZSS3Tgted_TMty0wzqMQYpm03yD7eAPRtQBYO5dMlD18uZxNDuKXvpqxUWfpl9URofPkQUyZFIMhCZw_p6JAcffI97rYbywnJ9Z3dd29VBxhpQ4yW3hIjGkk2YPDj2tWk7dT13imkgi.WTScyY_nkeANmS55VNJNzCcD.LID.kHxdX5SrELlbDrT4d0MrFcXPURqkLZus6pQQ--&h=576"
+                            src="https://fastly.picsum.photos/id/651/500/300.jpg?hmac=T_JiL_iCJyc_CpDp-q5CO-MqPzAUIUXXQQCTo8u3HDQ"
                             alt="Carousel 1"
                             className="w-1/2 object-cover rounded-lg overflow-hidden cursor-pointer hover:scale-103 transition-all duration-300 shadow-lg"
                             onClick={() => router.push('/detail')}
