@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import {
     MailIcon,
@@ -8,8 +9,11 @@ import {
     Youtube,
     Twitter,
 } from 'lucide-react'
+import { useTranslation } from '@/lib/i18n'
 
 const Footer = () => {
+    const { t } = useTranslation()
+
     return (
         <footer className="bg-background text-secondary-foreground pt-6 pb-6">
             <div className="container mx-auto px-4 md:px-6">
@@ -17,9 +21,11 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
                     {/* 品牌和简介 */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4">PakeStore</h3>
+                        <h3 className="text-xl font-bold mb-4">
+                            {t('footer.brand')}
+                        </h3>
                         <p className="text-gray-400 mb-6">
-                            发现最好的开源应用，无广告无追踪无恶意软件。关注我们，提交你的应用和项目，让开源应用被更多人发现和使用。
+                            {t('footer.intro')}
                         </p>
                         <div className="flex space-x-4">
                             <Link
@@ -67,14 +73,17 @@ const Footer = () => {
 
                     {/* 快速链接 */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">快速链接</h3>
+                        <h3 className="text-lg font-semibold mb-4">
+                            {t('footer.quickLinks')}
+                        </h3>
                         <ul className="space-y-2">
                             <li>
                                 <Link
                                     href="/about"
                                     className="text-gray-400  transition-colors duration-300 flex items-center"
                                 >
-                                    <span className="mr-2">→</span>关于我们
+                                    <span className="mr-2">→</span>
+                                    {t('footer.about')}
                                 </Link>
                             </li>
                             <li>
@@ -82,7 +91,8 @@ const Footer = () => {
                                     href="/services"
                                     className="text-gray-400  transition-colors duration-300 flex items-center"
                                 >
-                                    <span className="mr-2">→</span>服务
+                                    <span className="mr-2">→</span>
+                                    {t('footer.services')}
                                 </Link>
                             </li>
                             <li>
@@ -90,7 +100,8 @@ const Footer = () => {
                                     href="/contact"
                                     className="text-gray-400  transition-colors duration-300 flex items-center"
                                 >
-                                    <span className="mr-2">→</span>联系我们
+                                    <span className="mr-2">→</span>
+                                    {t('footer.contact')}
                                 </Link>
                             </li>
                         </ul>
@@ -98,7 +109,9 @@ const Footer = () => {
 
                     {/* 联系我们 */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">联系我们</h3>
+                        <h3 className="text-lg font-semibold mb-4">
+                            {t('footer.contact')}
+                        </h3>
                         <ul className="space-y-3">
                             <li className="flex items-start">
                                 <MapPinIcon
@@ -106,7 +119,7 @@ const Footer = () => {
                                     size={18}
                                 />
                                 <span className="text-gray-400">
-                                    北京市朝阳区建国路88号
+                                    {t('footer.address')}
                                 </span>
                             </li>
                             <li className="flex items-center">
@@ -124,7 +137,7 @@ const Footer = () => {
                                     size={18}
                                 />
                                 <span className="text-gray-400">
-                                    info@mybrand.com
+                                    {t('footer.email')}
                                 </span>
                             </li>
                         </ul>
@@ -132,15 +145,17 @@ const Footer = () => {
 
                     {/* 订阅通讯 */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">订阅通讯</h3>
+                        <h3 className="text-lg font-semibold mb-4">
+                            {t('footer.subscribe')}
+                        </h3>
                         <p className="text-gray-400 mb-4">
-                            订阅我们的通讯，获取最新的产品信息和优惠活动。
+                            {t('footer.subscribeDesc')}
                         </p>
                         <form className="space-y-2">
                             <div className="flex">
                                 <input
                                     type="email"
-                                    placeholder="您的邮箱地址"
+                                    placeholder={t('footer.emailPlaceholder')}
                                     className="px-4 rounded-l-md bg-input focus:outline-none w-full"
                                     required
                                 />
@@ -148,11 +163,11 @@ const Footer = () => {
                                     type="submit"
                                     className="bg-blue-600 hover:bg-blue-700 text-white px-2 py rounded-r-md transition-colors duration-300 w-20 h-10"
                                 >
-                                    订阅
+                                    {t('footer.subscribeBtn')}
                                 </button>
                             </div>
                             <p className="text-xs text-gray-500">
-                                我们尊重您的隐私，不会向第三方分享您的信息。
+                                {t('footer.privacyNote')}
                             </p>
                         </form>
                     </div>
@@ -162,27 +177,27 @@ const Footer = () => {
                     {/* 版权信息和底部链接 */}
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-gray-500 text-sm mb-4 md:mb-0">
-                            © {new Date().getFullYear()} PakeStore
-                            保留所有权利。
+                            © {new Date().getFullYear()} {t('footer.brand')}{' '}
+                            {t('footer.rights')}
                         </p>
                         <div className="flex space-x-6">
                             <Link
                                 href="/privacy-policy"
                                 className="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-300"
                             >
-                                隐私政策
+                                {t('footer.privacy')}
                             </Link>
                             <Link
                                 href="/terms-of-service"
                                 className="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-300"
                             >
-                                服务条款
+                                {t('footer.terms')}
                             </Link>
                             <Link
                                 href="/sitemap"
                                 className="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-300"
                             >
-                                网站地图
+                                {t('footer.sitemap')}
                             </Link>
                         </div>
                     </div>

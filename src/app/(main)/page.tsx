@@ -9,9 +9,11 @@ import {
 import { ChevronRightIcon } from 'lucide-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useRouter } from 'next/navigation'
+import { useTranslation } from '@/lib/i18n'
 
 export default function Home() {
     const router = useRouter()
+    const { t } = useTranslation()
 
     // 必备应用
     const essentialApps = [
@@ -147,29 +149,29 @@ export default function Home() {
                     className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-lg sm:text-xl md:text-2xl font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg"
                     onClick={() => router.push('/topic?topic=1')}
                 >
-                    新人必备
+                    {t('topic.essential')}
                 </div>
 
                 <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-lg sm:text-xl md:text-2xl font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
-                    图像视频
+                    {t('topic.media')}
                 </div>
 
                 <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-lg sm:text-xl md:text-2xl font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
-                    生产力
+                    {t('topic.productivity')}
                 </div>
 
                 <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-lg sm:text-xl md:text-2xl font-bold text-white bg-gradient-to-br from-red-300 to-pink-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg">
-                    游戏娱乐
+                    {t('topic.games')}
                 </div>
 
                 <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-lg sm:text-xl md:text-2xl font-bold text-white bg-gradient-to-br from-purple-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg col-span-2 lg:col-span-1">
-                    AI工具
+                    {t('topic.ai')}
                 </div>
             </div>
             {/* 推荐应用 */}
             <div className="mt-4 sm:mt-6">
                 <div className="text-xl sm:text-2xl font-bold flex justify-start items-center cursor-pointer hover:text-blue-500 w-30">
-                    <span>必备应用</span>
+                    <span>{t('section.essential')}</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
@@ -187,10 +189,10 @@ export default function Home() {
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        v1.0.0
+                                        {t('app.version')}
                                     </span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        {item.description}
+                                        {t('app.defaultDesc')}
                                     </span>
                                 </div>
                             </div>
@@ -202,7 +204,7 @@ export default function Home() {
                                     rel="noopener noreferrer"
                                     className="text-xs sm:text-sm font-bold bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg transition-colors duration-300"
                                 >
-                                    免费下载
+                                    {t('app.freeDownload')}
                                 </a>
                             </div>
                         </div>
@@ -212,7 +214,7 @@ export default function Home() {
             {/* 应用列表 */}
             <div className="mt-4 sm:mt-6">
                 <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500 w-30">
-                    <span>推荐应用</span>
+                    <span>{t('section.recommend')}</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
@@ -230,10 +232,10 @@ export default function Home() {
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        v1.0.0
+                                        {t('app.version')}
                                     </span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        {item.description}
+                                        {t('app.defaultDesc')}
                                     </span>
                                 </div>
                             </div>
@@ -245,7 +247,7 @@ export default function Home() {
                                     rel="noopener noreferrer"
                                     className="text-xs sm:text-sm font-bold bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg transition-colors duration-300"
                                 >
-                                    免费下载
+                                    {t('app.freeDownload')}
                                 </a>
                             </div>
                         </div>
@@ -255,19 +257,19 @@ export default function Home() {
             {/* 探索与发现 */}
             <div className="mt-4 sm:mt-6">
                 <h2 className="text-xl sm:text-2xl font-bold flex items-center">
-                    <span>探索与发现</span>
+                    <span>{t('section.explore')}</span>
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
                     <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg text-center px-2">
-                        这些工具你还不知道？
+                        {t('section.explore.unknown')}
                     </div>
 
                     <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg text-center px-2">
-                        AI时代，你准备好了吗？
+                        {t('section.explore.ai')}
                     </div>
 
                     <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg text-center px-2">
-                        提升生产力，从这里开始！
+                        {t('section.explore.productivity')}
                     </div>
                 </div>
             </div>
@@ -275,7 +277,7 @@ export default function Home() {
             {/* 必备应用 */}
             <div className="mt-4 sm:mt-6">
                 <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500 w-30">
-                    <span>必备应用</span>
+                    <span>{t('section.essential')}</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
@@ -293,10 +295,10 @@ export default function Home() {
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        v1.0.0
+                                        {t('app.version')}
                                     </span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        {item.description}
+                                        {t('app.defaultDesc')}
                                     </span>
                                 </div>
                             </div>
@@ -308,7 +310,7 @@ export default function Home() {
                                     rel="noopener noreferrer"
                                     className="text-xs sm:text-sm font-bold bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg transition-colors duration-300"
                                 >
-                                    免费下载
+                                    {t('app.freeDownload')}
                                 </a>
                             </div>
                         </div>
@@ -318,7 +320,7 @@ export default function Home() {
             {/* 推荐应用 */}
             <div className="mt-4 sm:mt-6">
                 <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500 w-30">
-                    <span>推荐应用</span>
+                    <span>{t('section.recommend')}</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
@@ -336,10 +338,10 @@ export default function Home() {
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        v1.0.0
+                                        {t('app.version')}
                                     </span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        {item.description}
+                                        {t('app.defaultDesc')}
                                     </span>
                                 </div>
                             </div>
@@ -351,7 +353,7 @@ export default function Home() {
                                     rel="noopener noreferrer"
                                     className="text-xs sm:text-sm font-bold bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg transition-colors duration-300"
                                 >
-                                    免费下载
+                                    {t('app.freeDownload')}
                                 </a>
                             </div>
                         </div>
@@ -361,26 +363,26 @@ export default function Home() {
             {/* 探索与发现 */}
             <div className="mt-4 sm:mt-6">
                 <h2 className="text-xl sm:text-2xl font-bold flex items-center">
-                    <span>探索与发现</span>
+                    <span>{t('section.explore')}</span>
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
                     <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white bg-gradient-to-br from-blue-300 to-indigo-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg text-center px-2">
-                        AI提升效率？来这里！
+                        {t('section.explore.ai2')}
                     </div>
 
                     <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white bg-gradient-to-br from-green-300 to-emerald-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg text-center px-2">
-                        有手就行？试试这个！
+                        {t('section.explore.easy')}
                     </div>
 
                     <div className="card h-28 sm:h-32 md:h-36 lg:h-40 flex items-center justify-center rounded-xl text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white bg-gradient-to-br from-amber-300 to-orange-400 hover:scale-103 transition-all duration-300 active:scale-95 cursor-pointer select-none shadow-lg text-center px-2">
-                        提高生产力，从这里开始！
+                        {t('section.explore.productivity2')}
                     </div>
                 </div>
             </div>
             {/* 应用列表 */}
             <div className="mt-4 sm:mt-6">
                 <h2 className="text-xl sm:text-2xl font-bold flex items-center cursor-pointer hover:text-blue-500 w-30">
-                    <span>推荐应用</span>
+                    <span>{t('section.recommend')}</span>
                     <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-3 sm:mt-4">
@@ -398,10 +400,10 @@ export default function Home() {
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        v1.0.0
+                                        {t('app.version')}
                                     </span>
                                     <span className="text-xs sm:text-sm text-gray-400">
-                                        {item.description}
+                                        {t('app.defaultDesc')}
                                     </span>
                                 </div>
                             </div>
@@ -413,7 +415,7 @@ export default function Home() {
                                     rel="noopener noreferrer"
                                     className="text-xs sm:text-sm font-bold bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg transition-colors duration-300"
                                 >
-                                    免费下载
+                                    {t('app.freeDownload')}
                                 </a>
                             </div>
                         </div>

@@ -24,6 +24,8 @@ import { DropdownMenuItem } from '@radix-ui/react-dropdown-menu'
 import { useState } from 'react'
 import { Input } from './ui/input'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { useTranslation } from '@/lib/i18n'
+import useLocaleStore from '@/store/locale'
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -74,6 +76,9 @@ export default function Header() {
         router.push('/login')
     }
 
+    const { t } = useTranslation()
+    const setLocale = useLocaleStore((s) => s.setLocale)
+
     return (
         <header className="py-4 sticky top-0 z-50 shadow-md bg-background">
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
@@ -105,7 +110,7 @@ export default function Header() {
                             <NavigationMenuList>
                                 <NavigationMenuItem>
                                     <NavigationMenuTrigger className="text-md font-bold">
-                                        首页
+                                        {t('nav.home')}
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -121,7 +126,9 @@ export default function Header() {
                                                             PakePlus
                                                         </div>
                                                         <p className="text-muted-foreground text-sm leading-tight">
-                                                            打包网页/Vue/React项目为桌面/手机应用只需几分钟
+                                                            {t(
+                                                                'nav.pakeplusDesc'
+                                                            )}
                                                         </p>
                                                     </a>
                                                 </NavigationMenuLink>
@@ -130,7 +137,7 @@ export default function Header() {
                                                 href="https://pakeplus.com/"
                                                 title="PakePlus"
                                             >
-                                                打包网页/Vue/React项目为桌面/手机应用只需几分钟
+                                                {t('nav.pakeplusDesc')}
                                             </ListItem>
                                             <ListItem
                                                 href="/docs/installation"
@@ -151,7 +158,7 @@ export default function Header() {
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <NavigationMenuTrigger className="text-md font-bold">
-                                        电脑应用
+                                        {t('nav.desktop')}
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         <ul className="grid w-[200px] gap-4">
@@ -159,30 +166,32 @@ export default function Header() {
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/pc?type=Mac">
                                                         <div className="font-medium">
-                                                            Mac
+                                                            {t('nav.mac')}
                                                         </div>
                                                         <div className="text-muted-foreground">
-                                                            苹果电脑应用
+                                                            {t('nav.macDesc')}
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/pc?type=Windows">
                                                         <div className="font-medium">
-                                                            Windows
+                                                            {t('nav.windows')}
                                                         </div>
                                                         <div className="text-muted-foreground">
-                                                            微软电脑应用
+                                                            {t(
+                                                                'nav.windowsDesc'
+                                                            )}
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/pc?type=Linux">
                                                         <div className="font-medium">
-                                                            Linux
+                                                            {t('nav.linux')}
                                                         </div>
                                                         <div className="text-muted-foreground">
-                                                            ubuntu电脑应用
+                                                            {t('nav.linuxDesc')}
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
@@ -192,7 +201,7 @@ export default function Header() {
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <NavigationMenuTrigger className="text-md font-bold">
-                                        手机应用
+                                        {t('nav.mobile')}
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         <ul className="grid w-[200px] gap-4">
@@ -200,30 +209,36 @@ export default function Header() {
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/phone?type=iOS">
                                                         <div className="font-medium">
-                                                            iOS
+                                                            {t('nav.ios')}
                                                         </div>
                                                         <div className="text-muted-foreground">
-                                                            苹果手机和ipad应用
+                                                            {t('nav.iosDesc')}
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/phone?type=Android">
                                                         <div className="font-medium">
-                                                            Android
+                                                            {t('nav.android')}
                                                         </div>
                                                         <div className="text-muted-foreground">
-                                                            安卓手机和平板应用
+                                                            {t(
+                                                                'nav.androidDesc'
+                                                            )}
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/phone?type=Android">
                                                         <div className="font-medium">
-                                                            小程序
+                                                            {t(
+                                                                'nav.miniProgram'
+                                                            )}
                                                         </div>
                                                         <div className="text-muted-foreground">
-                                                            微信小程序抖音小程序等
+                                                            {t(
+                                                                'nav.miniProgramDesc'
+                                                            )}
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
@@ -233,7 +248,7 @@ export default function Header() {
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <NavigationMenuTrigger className="text-md font-bold">
-                                        网站博客
+                                        {t('nav.blog')}
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         <ul className="grid w-[200px] gap-4">
@@ -241,30 +256,38 @@ export default function Header() {
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/phone?type=iOS">
                                                         <div className="font-medium">
-                                                            网站推荐
+                                                            {t(
+                                                                'nav.siteRecommend'
+                                                            )}
                                                         </div>
                                                         <div className="text-muted-foreground">
-                                                            网站推荐分享
+                                                            {t(
+                                                                'nav.siteRecommendDesc'
+                                                            )}
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/phone?type=iOS">
                                                         <div className="font-medium">
-                                                            技术分享
+                                                            {t('nav.techShare')}
                                                         </div>
                                                         <div className="text-muted-foreground">
-                                                            前沿技术分享
+                                                            {t(
+                                                                'nav.techShareDesc'
+                                                            )}
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
                                                 <NavigationMenuLink asChild>
                                                     <Link href="/phone?type=Android">
                                                         <div className="font-medium">
-                                                            生活经验
+                                                            {t('nav.lifeExp')}
                                                         </div>
                                                         <div className="text-muted-foreground">
-                                                            生活经验交流
+                                                            {t(
+                                                                'nav.lifeExpDesc'
+                                                            )}
                                                         </div>
                                                     </Link>
                                                 </NavigationMenuLink>
@@ -280,7 +303,7 @@ export default function Header() {
                     <div className="hidden md:flex">
                         <Input
                             type="text"
-                            placeholder="搜索应用"
+                            placeholder={t('nav.search')}
                             className="w-64 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-blue-500 transition-all duration-300 hover:scale-101"
                         />
                     </div>
@@ -297,7 +320,7 @@ export default function Header() {
                                 <div className="p-2">
                                     <Input
                                         type="text"
-                                        placeholder="搜索应用"
+                                        placeholder={t('nav.search')}
                                         className="w-full"
                                     />
                                 </div>
@@ -318,13 +341,22 @@ export default function Header() {
                                 <span className="iconfont icon-zhongyingwenqiehuan_EN"></span>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent sideOffset={5}>
-                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300">
+                                <DropdownMenuItem
+                                    className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300"
+                                    onClick={() => setLocale('zh-cn')}
+                                >
                                     <div className="px-2 py-2">简体中文</div>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300">
+                                <DropdownMenuItem
+                                    className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300"
+                                    onClick={() => setLocale('zh-tw')}
+                                >
                                     <div className="px-2 py-2">繁体中文</div>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300">
+                                <DropdownMenuItem
+                                    className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300"
+                                    onClick={() => setLocale('en')}
+                                >
                                     <div className="px-2 py-2">English</div>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
@@ -350,16 +382,22 @@ export default function Header() {
                                 className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300"
                                 onClick={() => router.push('/user')}
                             >
-                                <div className="px-2 py-2">个人中心</div>
+                                <div className="px-2 py-2">
+                                    {t('user.center')}
+                                </div>
                             </DropdownMenuItem>
                             <DropdownMenuItem className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300">
-                                <div className="px-2 py-2">我的收藏</div>
+                                <div className="px-2 py-2">
+                                    {t('user.favorites')}
+                                </div>
                             </DropdownMenuItem>
                             <DropdownMenuItem
                                 className="cursor-pointer border-none outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-all duration-300"
                                 onClick={handleLogout}
                             >
-                                <div className="px-2 py-2">退出登陆</div>
+                                <div className="px-2 py-2">
+                                    {t('user.logout')}
+                                </div>
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
@@ -378,40 +416,46 @@ export default function Header() {
                                     <div className="flex-1 py-6">
                                         <nav className="grid gap-6">
                                             <MobileNavItem
-                                                title="首页"
+                                                title={t('nav.home')}
                                                 href="/"
                                             />
-                                            <MobileNavSection title="电脑应用">
+                                            <MobileNavSection
+                                                title={t('nav.desktop')}
+                                            >
                                                 <MobileNavItem
-                                                    title="Mac"
+                                                    title={t('nav.mac')}
                                                     href="/pc?type=Mac"
                                                 />
                                                 <MobileNavItem
-                                                    title="Windows"
+                                                    title={t('nav.windows')}
                                                     href="/pc?type=Windows"
                                                 />
                                                 <MobileNavItem
-                                                    title="Linux"
+                                                    title={t('nav.linux')}
                                                     href="/pc?type=Linux"
                                                 />
                                             </MobileNavSection>
-                                            <MobileNavSection title="手机应用">
+                                            <MobileNavSection
+                                                title={t('nav.mobile')}
+                                            >
                                                 <MobileNavItem
-                                                    title="iOS"
+                                                    title={t('nav.ios')}
                                                     href="/mobile?type=iOS"
                                                 />
                                                 <MobileNavItem
-                                                    title="Android"
+                                                    title={t('nav.android')}
                                                     href="/mobile?type=Android"
                                                 />
                                             </MobileNavSection>
-                                            <MobileNavSection title="博客文章">
+                                            <MobileNavSection
+                                                title={t('nav.blog')}
+                                            >
                                                 <MobileNavItem
-                                                    title="技术分享"
+                                                    title={t('nav.techShare')}
                                                     href="/blog/tech"
                                                 />
                                                 <MobileNavItem
-                                                    title="生活经验"
+                                                    title={t('nav.lifeExp')}
                                                     href="/blog/life"
                                                 />
                                             </MobileNavSection>
@@ -422,7 +466,7 @@ export default function Header() {
                                     <div className="p-4 border-t">
                                         <Input
                                             type="text"
-                                            placeholder="搜索应用"
+                                            placeholder={t('nav.search')}
                                             className="w-full"
                                         />
                                     </div>
