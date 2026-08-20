@@ -182,7 +182,7 @@ export default function Home() {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden cursor-pointer border border-secondary"
+                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover flex-shrink-0 cursor-pointer border border-secondary"
                                 />
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
@@ -225,7 +225,7 @@ export default function Home() {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden cursor-pointer border border-secondary"
+                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover flex-shrink-0 cursor-pointer border border-secondary"
                                 />
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
@@ -288,7 +288,7 @@ export default function Home() {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden cursor-pointer border border-secondary"
+                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover flex-shrink-0 cursor-pointer border border-secondary"
                                 />
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
@@ -331,7 +331,7 @@ export default function Home() {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden cursor-pointer border border-secondary"
+                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover flex-shrink-0 cursor-pointer border border-secondary"
                                 />
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
@@ -393,7 +393,7 @@ export default function Home() {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden cursor-pointer border border-secondary"
+                                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover flex-shrink-0 cursor-pointer border border-secondary"
                                 />
                                 <div className="text-base sm:text-lg font-bold flex flex-col">
                                     <span>{item.title}</span>
