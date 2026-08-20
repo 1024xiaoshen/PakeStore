@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function SideList() {
     const sideList = [
         {
@@ -73,17 +75,21 @@ export default function SideList() {
             {sideList.map((item) => (
                 <div
                     key={item.id}
-                    className="flex items-center gap-2 py-4 px-2 hover:bg-gray-100 border-b border-gray-200 transition-all duration-300 cursor-pointer hover:scale-102 hover:rounded-md hover:shadow-md"
+                    className="flex items-center gap-3 py-3 px-2 hover:bg-gray-100 dark:hover:bg-gray-800 border-b border-gray-200 last:border-b-0 rounded-md transition-all duration-300 cursor-pointer"
                 >
-                    <img
+                    <Image
                         src={item.image}
                         alt={item.title}
-                        className="rounded-md w-10 h-10 min-w-10 min-h-10"
+                        width={40}
+                        height={40}
+                        className="rounded-md w-10 h-10 object-cover flex-shrink-0"
                     />
-                    <div className="flex flex-col">
-                        <h1 className="text-sm">{item.title}</h1>
-                        <p className="text-sm text-gray-500">
-                            打包网页/Vue/React打包网页/Vue/React
+                    <div className="flex flex-col min-w-0">
+                        <h3 className="text-sm font-medium truncate">
+                            {item.title}
+                        </h3>
+                        <p className="text-xs text-gray-500 truncate">
+                            打包网页/Vue/React
                         </p>
                     </div>
                 </div>

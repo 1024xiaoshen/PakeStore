@@ -1,257 +1,47 @@
 import Image from 'next/image'
+import { appList } from '@/lib/appData'
 
 export default function AppList() {
-    // 列表数据
-    const appList = [
-        {
-            id: 1,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 2,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 3,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 4,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 5,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 6,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 7,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 8,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 9,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 10,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 11,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 12,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 13,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 14,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 15,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-            message: '100',
-            version: '1.0.0',
-            updateTime: '2021-01-01',
-            detail: '详情',
-        },
-        {
-            id: 16,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-        },
-        {
-            id: 17,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-        },
-        {
-            id: 18,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-        },
-        {
-            id: 19,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-        },
-        {
-            id: 20,
-            title: '标题',
-            description: '描述',
-            image: 'https://avatars.githubusercontent.com/u/56043599?v=4',
-            size: '100MB',
-        },
-    ]
     return (
-        <>
-            <div className="flex flex-col bg-background px-4 py-4 shadow-md rounded-lg">
-                {/* 列表 */}
-                {appList.map((item) => (
-                    <div
-                        key={item.id}
-                        className="flex justify-between items-center gap-2 py-4 px-2  hover:bg-gray-100 cursor-pointer border-b border-gray-200 transition-all duration-300 hover:scale-102 hover:rounded-md hover:shadow-md"
-                    >
-                        {/* 标题 */}
-                        <div className="flex gap-4">
-                            <Image
-                                src="https://avatars.githubusercontent.com/u/56043599?v=4"
-                                alt="User"
-                                width={32}
-                                height={32}
-                                className="cursor-pointer rounded-md w-14 h-14"
-                            />
-                            <div className="flex flex-col items-start justify-center">
-                                <h1 className="text-lg">标题</h1>
-                                <p className="text-sm text-gray-500">
-                                    何必是网站，秒变桌面应用和手机应用
-                                </p>
-                            </div>
-                        </div>
-                        {/* 体积 */}
-                        <div>
-                            <p>体积</p>
-                        </div>
-                        {/* 留言 */}
-                        <div>
-                            <p>留言</p>
-                        </div>
-                        {/* 版本 */}
-                        <div>
-                            <p>版本</p>
-                        </div>
-                        {/* 更新时间 */}
-                        <div>
-                            <p>更新时间</p>
-                        </div>
-                        {/* 详情 */}
-                        <div>
-                            <p>详情</p>
+        <div className="flex flex-col bg-background px-3 sm:px-4 py-2 shadow-md rounded-lg">
+            {/* 列表 */}
+            {appList.map((item) => (
+                <div
+                    key={item.id}
+                    className="flex items-center gap-3 sm:gap-4 py-3 sm:py-4 px-2 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer border-b border-gray-200 last:border-b-0 rounded-md transition-all duration-300"
+                >
+                    {/* 主信息：图标 + 标题 + 描述，各端始终显示 */}
+                    <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
+                        <Image
+                            src={item.image}
+                            alt={item.title}
+                            width={56}
+                            height={56}
+                            className="rounded-lg w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-cover flex-shrink-0"
+                        />
+                        <div className="flex flex-col items-start justify-center min-w-0 gap-0.5">
+                            <h3 className="text-sm sm:text-base font-medium truncate max-w-full">
+                                {item.title}
+                            </h3>
+                            <p className="text-xs sm:text-sm text-gray-500 truncate max-w-full">
+                                {item.description}
+                            </p>
                         </div>
                     </div>
-                ))}
-            </div>
-        </>
+                    {/* 附加信息列：平板及以上显示，移动端隐藏避免挤压 */}
+                    <div className="hidden md:flex items-center gap-4 lg:gap-8 text-sm text-gray-500 flex-shrink-0">
+                        <span className="w-16 text-center">{item.size}</span>
+                        <span className="w-16 text-center">{item.message}</span>
+                        <span className="w-16 text-center">{item.version}</span>
+                        <span className="w-24 text-center">
+                            {item.updateTime}
+                        </span>
+                        <span className="w-16 text-center text-primary cursor-pointer">
+                            详情
+                        </span>
+                    </div>
+                </div>
+            ))}
+        </div>
     )
 }

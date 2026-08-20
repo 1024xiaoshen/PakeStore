@@ -52,20 +52,20 @@ PakePlus 仅作为打包工具使用，不支持软件签名，打包后的软�
     return (
         <div className="container mx-auto px-3 sm:px-4 md:px-6 py-4">
             {/* 头部 */}
-            <div className="flex justify-center items-center gap-40 my-16">
+            <div className="flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-8 lg:gap-20 my-8 lg:my-16">
                 {/* 左侧标题和描述 */}
-                <div className="flex flex-col gap-4">
-                    <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-500 via-purple-400 to-purple-600 bg-clip-text text-transparent">
+                <div className="flex flex-col gap-4 items-center lg:items-start text-center lg:text-left">
+                    <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-500 via-purple-400 to-purple-600 bg-clip-text text-transparent">
                         PakePlus
                     </h1>
-                    <h2 className="text-4xl font-bold">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
                         何必是网站，秒变桌面应用和手机应用
                     </h2>
-                    <p className="text-2xl">
+                    <p className="text-base sm:text-xl lg:text-2xl text-gray-500">
                         打包网页/Vue/React项目为桌面/手机应用只需几分钟
                     </p>
                     {/* 按钮 */}
-                    <div className="flex gap-4">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
                         <Button
                             className="bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 active:scale-95"
                             size="lg"
@@ -140,7 +140,7 @@ PakePlus 仅作为打包工具使用，不支持软件签名，打包后的软�
                 <h1 className="text-2xl font-bold borde-b border-gray-500 py-2">
                     其他信息
                 </h1>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     <div className="">
                         <div>发布者</div>
                         <div>1024小神</div>
