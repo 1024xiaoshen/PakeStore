@@ -95,8 +95,8 @@ const SuspensePC = () => {
                     />
                 </div>
             </div>
-            {/* right sidebar：移动端移至底部 */}
-            <div className="w-full lg:w-1/5">
+            {/* right sidebar：仅桌面端（lg+）显示 */}
+            <div className="hidden lg:block lg:w-1/5">
                 {/* 顶部标题 */}
                 <h1 className="text-xl sm:text-2xl font-bold py-4">软件推荐</h1>
                 {/* 推荐列表 */}
